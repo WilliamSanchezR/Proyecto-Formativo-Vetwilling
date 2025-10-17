@@ -1,0 +1,125 @@
+/* tipografias */
+
+/* estilos para barra de nav */
+.hero{
+    background: #000;
+}
+.custom-navbar {
+  border-radius: 0 0 35px 35px;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: 160px;
+}
+
+.nav-link:hover {
+  color: #00a652 !important;
+}
+
+.btn-success {
+  background-color: #00a652 !important;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #028a47 !important;
+}
+/* desde aca sampo lo que es el hero */
+/* Sección Sobre Nosotros */
+#hero {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+#hero h2 {
+  color: #198754; /* verde principal */
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#hero p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+#hero .btn-success {
+  background-color: #00a652 !important;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#hero .btn-success:hover {
+  background-color: #028a47 !important;
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.about-img {
+  max-width: 90%;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+}
+
+#hero{
+  border-radius: 0 0 140px 0;
+}
+/* aca ponemos lo que es lo modulos esos */
+/* Fondo general */
+#modulos {
+  position: relative;
+  background-color: #0a8f43;
+  overflow: hidden;
+}
+
+
+/* Texto */
+#modulos h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#modulos p {
+  max-width: 800px;
+  color: #f8f9fa;
+}
+
+/* Tarjetas */
+.modulo-card {
+  background-color: #9DE795;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modulo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.modulo-card h5 {
+  color: #424B54;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #modulos h2 {
+    text-align: center;
+  }
+
+  #modulos p {
+    text-align: center;
+  }
+}
+
