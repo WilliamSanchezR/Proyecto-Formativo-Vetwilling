@@ -11,6 +11,7 @@
 /* 2. Colores */
 :root {
     --primary-color: #0A932C; /* Color principal de la marca.*/
+    --white-color: #FFFFFF; /*Color blanco*/
     --green-background: #9DE795; /* Ideal para fondos, detalles secundarios y refuerzos visuales.*/
     --neutral-color: #424B54; /* Color neutro, utilizado en tipografías y elementos secundarios.*/
     --light-color: #93BEDF; /* Se recomienda para destacar elementos sin perder armonía.*/
@@ -19,7 +20,9 @@
 /* 3. Botones */
 
 /* 4. Campos */
-
+body {
+    margin: 0px;
+}
 
 /* 5. Titulos */
 h1,
