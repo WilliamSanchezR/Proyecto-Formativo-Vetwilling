@@ -231,3 +231,68 @@ body {
   color: #0A932C;
   border-color: #fff;
 }
+
+
+/* equipo de trabajo y eso solo me falto las img */
+#equipo {
+  background-color: #1b9e3e;
+  border-top-left-radius: 120px;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#equipo h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.container-equipo {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipo-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card-equipo {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-equipo:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-equipo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-equipo .info {
+  padding: 15px;
+}
+
+.card-equipo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card-equipo p {
+  font-size: 0.9rem;
+  color: #666;
+}
