@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "nombre": "Luna",
+        "especie": "Mamífero",
+        "raza": "Perra Pincher",
+        "edad": "3 años",
+        "sexo": "Hembra"
+    },
+     {
+        "id": 2,
+        "nombre": "Leo",
+        "especie": "Reptil",
+        "raza": "Iguana",
+        "edad": "2 años",
+        "sexo": "Macho"
+    },
+     {
+        "id": 3,
+        "nombre": "Gitana",
+        "especie": "Mamífero",
+        "raza": "Yegua Pura sangre",
+        "edad": "5 años",
+        "sexo": "Hembra"
+    },
+     {
+        "id": 4,
+        "nombre": "Lucca",
+        "especie": "Ave",
+        "raza": "Pato",
+        "edad": "7 meses",
+        "sexo": "Macho"
+    },
+     {
+        "id": 5,
+        "nombre": "luna",
+        "especie": "Anfibio",
+        "raza": "Rana coreana",
+        "edad": "1 año",
+        "sexo": "Hembra"
+    }
+
+]
