@@ -19,7 +19,7 @@ main{
     background-color: #93BEDF40;
     width: 804px;
     border-radius: 67px;
-    padding: 12px 40px 35px 40px;
+    padding: 20px 40px 35px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -30,12 +30,12 @@ main{
 .cont .info h2{
     color: var(--white-color);
     font-size: 48px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 .cont .info p{
     color: var(--white-color);
     font-size: 24px;
-    width: 85%;
+    width: 100%;
     text-align: center;
 }
