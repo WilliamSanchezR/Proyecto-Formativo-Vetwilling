@@ -58,112 +58,75 @@
 
     <main>
 
-
-        <section id="menu-izq">
-
-            <div class="cont-menu">
-
-                <div class="cont-fav">
-                    <img src="" alt="">
-                    <h2>ByeWind</h2>
-                    <div class="row">
-                        <ul>
-                            <li>Favoritos</li>
-                            <li>Recientes</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="dropdown dashboard">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dashboard
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Citas</a></li>
-                        <li><a class="dropdown-item" href="#">Laboratorio</a></li>
-                    </ul>
-                </div>
-
-                <div class="cont-info-perso">
-
-                    <div class="dropdown cont-perfil">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Perfil usuario
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">General</a></li>
-                            <li><a class="dropdown-item" href="#">Documentos</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown cont-notas">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Notas
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Destacadas</a></li>
-                            <li><a class="dropdown-item" href="#">Recientes</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="cont-regis-report">
-
-                    <div class="dropdown cont-registros">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Registro Usuario
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown cont-gest-cli">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Gestion Clinica
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown cont-reportes">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Reportes
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown cont-recetas">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Recetas
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <button id="salir">Salir</button>
-
+        <!-- BARRA LATERAL IZQUIERDA -->
+        <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
+            <div class="marca-sidebar">
+                <i class="bi bi-wind"></i>
+                <span class="texto-marca-sidebar">ByeWind</span>
             </div>
 
-        </section>
+            <div class="pestanas-sidebar">
+                <button class="pestana-sidebar active">Favoritos</button>
+                <button class="pestana-sidebar">Recientes</button>
+            </div>
+
+            <div class="menu-sidebar">
+                <div class="seccion-sidebar">•</div>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-heart"></i>
+                    <span class="texto-item-sidebar">Pacientes</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span class="texto-item-sidebar">Seguimientos</span>
+                </a>
+
+                <div class="seccion-sidebar">Menu</div>
+                <a href="#" class="item-sidebar active">
+                    <i class="bi bi-speedometer2"></i>
+                    <span class="texto-item-sidebar">Dashboard</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-calendar-check"></i>
+                    <span class="texto-item-sidebar">Citas</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-flask"></i>
+                    <span class="texto-item-sidebar">Laboratorio</span>
+                </a>
+
+                <div class="seccion-sidebar">Opciones</div>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-person-badge"></i>
+                    <span class="texto-item-sidebar">Perfil usuario</span>
+                    <i class="bi bi-chevron-right ms-auto"></i>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-sticky"></i>
+                    <span class="texto-item-sidebar">Notas</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-person-plus"></i>
+                    <span class="texto-item-sidebar">Registro Usuario</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-hospital"></i>
+                    <span class="texto-item-sidebar">Gestión clínica</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span class="texto-item-sidebar">Reportes</span>
+                </a>
+                <a href="#" class="item-sidebar">
+                    <i class="bi bi-receipt"></i>
+                    <span class="texto-item-sidebar">Recetas</span>
+                </a>
+            </div>
+
+            <button class="boton-colapsar" onclick="alternarBarraIzquierda()">
+                <i class="bi bi-chevron-left" id="iconoColapsar"></i>
+            </button>
+        </div>
 
 
     </main>
