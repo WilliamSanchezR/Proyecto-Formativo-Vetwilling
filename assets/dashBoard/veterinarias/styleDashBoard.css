@@ -27,22 +27,24 @@
 
     /* - Cuarto variables */
 
-    :root {
-        --prymari-color: #0A932c;
-        --green-color: #9DE795;
-        --gray-color: #424B54;
-        --blue-color: #93BEDF;
-        --fs-tittle1: 32px;
-        --fs-tittle2: 24px;
-        --fs-tittle3: 16px;
-        --fs-tittle4: 14px;
-        --fs-text: 20px;
-        --fs-text1: 12px;
-    }
+:root {
+    --color-primario: #0a932c;       /* Verde principal */
+    --color-verde: #9de795;          /* Verde claro */
+    --color-gris: #424b54;           /* Gris texto */
+    --color-azul: #93bedf;           /* Azul acento */
+    --color-fondo: #f8f9fa;          /* Fondo general */
+
+    --fs-titulo1: 32px;
+    --fs-titulo2: 24px;
+    --fs-titulo3: 16px;
+    --fs-titulo4: 14px;
+    --fs-texto: 20px;
+    --fs-texto1: 12px;
+}
 
     /* - Quinto Destkop */
 
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
