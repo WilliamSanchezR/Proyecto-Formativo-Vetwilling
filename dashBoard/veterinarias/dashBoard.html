@@ -140,7 +140,7 @@
             <div class="p-3">
                 <h6 class="mb-3 fw-bold">Notificaciones</h6>
                 <div class="item-notificacion">
-                    <div class="icono-notificacion" style="background: #dbeafe; color: #3b82f6;">
+                    <div class="icono-notificacion icono-notificacion-azul">
                         <i class="bi bi-bug"></i>
                     </div>
                     <div>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="item-notificacion">
-                    <div class="icono-notificacion" style="background: #fef3c7; color: #f59e0b;">
+                    <div class="icono-notificacion icono-notificacion-amarillo">
                         <i class="bi bi-person-plus"></i>
                     </div>
                     <div>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 <div class="item-notificacion">
-                    <div class="icono-notificacion" style="background: #dbeafe; color: #3b82f6;">
+                    <div class="icono-notificacion icono-notificacion-azul">
                         <i class="bi bi-bug-fill"></i>
                     </div>
                     <div>
@@ -171,7 +171,7 @@
             <div class="p-3 border-top">
                 <h6 class="mb-3 fw-bold">Actividades</h6>
                 <div class="item-actividad">
-                    <div class="icono-actividad" style="background: #fee2e2; color: #ef4444;">
+                    <div class="icono-actividad icono-actividad-rojo">
                         <i class="bi bi-heart-pulse"></i>
                     </div>
                     <div>
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="item-actividad">
-                    <div class="icono-actividad" style="background: #dbeafe; color: #3b82f6;">
+                    <div class="icono-actividad icono-actividad-azul">
                         <i class="bi bi-syringe"></i>
                     </div>
                     <div>
@@ -189,7 +189,7 @@
                     </div>
                 </div>
                 <div class="item-actividad">
-                    <div class="icono-actividad" style="background: #fee2e2; color: #ef4444;">
+                    <div class="icono-actividad icono-actividad-rojo">
                         <i class="bi bi-bandaid"></i>
                     </div>
                     <div>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
                 <div class="item-actividad">
-                    <div class="icono-actividad" style="background: #dbeafe; color: #3b82f6;">
+                    <div class="icono-actividad icono-actividad-azul">
                         <i class="bi bi-heart-pulse"></i>
                     </div>
                     <div>
@@ -207,7 +207,7 @@
                     </div>
                 </div>
                 <div class="item-actividad">
-                    <div class="icono-actividad" style="background: #dcfce7; color: #22c55e;">
+                    <div class="icono-actividad icono-actividad-verde">
                         <i class="bi bi-capsule"></i>
                     </div>
                     <div>
@@ -349,64 +349,52 @@
                     </div>
                 </div>
 
-                <!-- ÁREA DE CONTENIDO -->
-                <div class="area-contenido">
-                    <!-- TARJETA DE BIENVENIDA -->
-                    <div class="tarjeta-bienvenida">
-                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=vet" alt="Avatar"
-                            class="avatar-bienvenida">
-                        <div>
-                            <h2>Bienvenido, Dr Chapatin</h2>
-                            <p class="mb-0">Ten un buena día de trabajo :)</p>
+                <!-- LINEA DE TIEMPO -->
+                <div class="seccion-linea-tiempo">
+                    <h4 class="mb-3">Línea de Tiempo</h4>
+                    <div class="item-linea-tiempo">
+                        <div class="hora-linea-tiempo">10:00 am</div>
+                        <div class="punto-linea-tiempo bg-danger"></div>
+                        <div class="contenido-linea-tiempo">
+                            <strong>Consulta</strong>
+                            <div class="text-muted">Nombre p - Petunia</div>
                         </div>
                     </div>
-
-                    <!-- CALENDARIO -->
-                    <div class="seccion-calendario">
-                        <h4 class="mb-0">Calendario</h4>
-                        <div class="grilla-calendario">
-                            <div class="dia-calendario">
-                                <small>DOM</small>
-                                <strong>7</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>LUN</small>
-                                <strong>8</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>MAR</small>
-                                <strong>9</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>MIE</small>
-                                <strong>10</strong>
-                            </div>
-                            <div class="dia-calendario active">
-                                <small>JUE</small>
-                                <strong>11</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>VIE</small>
-                                <strong>12</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>SAB</small>
-                                <strong>13</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>DOM</small>
-                                <strong>14</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>LUN</small>
-                                <strong>15</strong>
-                            </div>
-                            <div class="dia-calendario">
-                                <small>MAR</small>
-                                <strong>16</strong>
-                            </div>
+                    <div class="item-linea-tiempo">
+                        <div class="hora-linea-tiempo">10:30 am</div>
+                        <div class="punto-linea-tiempo bg-primary"></div>
+                        <div class="contenido-linea-tiempo">
+                            <strong>Laboratorio</strong>
+                            <div class="text-muted">Nombre paciente - Petunia</div>
                         </div>
                     </div>
+                    <div class="item-linea-tiempo">
+                        <div class="hora-linea-tiempo">11:00 am</div>
+                        <div class="punto-linea-tiempo bg-danger"></div>
+                        <div class="contenido-linea-tiempo">
+                            <strong>Consulta</strong>
+                            <div class="text-muted">Nombre paciente - Petunia</div>
+                        </div>
+                    </div>
+                    <div class="item-linea-tiempo">
+                        <div class="hora-linea-tiempo">11:30 am</div>
+                        <div class="punto-linea-tiempo bg-success"></div>
+                        <div class="contenido-linea-tiempo">
+                            <strong>Radiografía</strong>
+                            <div class="text-muted">Nombre paciente - Petunia</div>
+                        </div>
+                    </div>
+                    <div class="item-linea-tiempo">
+                        <div class="hora-linea-tiempo">12:00 pm</div>
+                        <div class="punto-linea-tiempo bg-danger"></div>
+                        <div class="contenido-linea-tiempo">
+                            <strong>Consulta</strong>
+                            <div class="text-muted">Nombre paciente - Petunia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
