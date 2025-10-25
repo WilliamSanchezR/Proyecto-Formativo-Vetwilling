@@ -93,8 +93,8 @@ h5, h6 { font-size: var(--fs-titulo4); }
     gap: 12px;
 }
 
-.marca-sidebar i {
-    font-size: var(--fs-titulo2);
+.marca-sidebar img {
+    font-size: 30px;
 }
 
 .texto-marca-sidebar {
