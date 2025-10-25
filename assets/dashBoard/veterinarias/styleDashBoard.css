@@ -85,12 +85,12 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .marca-sidebar {
-    padding: 1.5rem;
+    padding: 24px;
     color: white;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 12px;
 }
 
 .marca-sidebar i {
@@ -113,17 +113,17 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .pestanas-sidebar {
     display: flex;
-    padding: 1rem 0.5rem;
-    gap: 0.5rem;
+    padding: 16px 8px;
+    gap: 8px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .pestana-sidebar {
     flex: 1;
-    padding: 0.5rem;
+    padding: 8px;
     background: rgba(255,255,255,0.1);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     color: rgba(255,255,255,0.7);
     font-size: var(--fs-titulo4);
     font-family: 'Open Sans', sans-serif;
@@ -140,20 +140,20 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .barra-lateral-izquierda.colapsada .pestanas-sidebar {
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 8px;
 }
 
 .barra-lateral-izquierda.colapsada .pestana-sidebar {
     font-size: var(--fs-texto1);
-    padding: 0.3rem;
+    padding: 5px;
 }
 
 .menu-sidebar {
-    padding: 1rem 0;
+    padding: 16px 0;
 }
 
 .seccion-sidebar {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     color: rgba(255,255,255,0.5);
     font-size: var(--fs-texto1);
     font-weight: 600;
@@ -164,17 +164,17 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .barra-lateral-izquierda.colapsada .seccion-sidebar {
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 8px 0;
 }
 
 .item-sidebar {
-    margin: 0.25rem 0.5rem;
-    padding: 0.75rem 1rem;
+    margin: 4px 8px;
+    padding: 12px 16px;
     color: rgba(255,255,255,0.85);
-    border-radius: 0.75rem;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 12px;
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
@@ -206,7 +206,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .barra-lateral-izquierda.colapsada .item-sidebar {
     justify-content: center;
-    padding: 0.75rem;
+    padding: 12px;
 }
 
 .barra-lateral-izquierda.colapsada .texto-item-sidebar {
@@ -221,13 +221,13 @@ h5, h6 { font-size: var(--fs-titulo4); }
     position: absolute;
     top: 5px;
     right: 5px;
-    padding: 0.15rem 0.35rem;
-    font-size: 0.65rem;
+    padding: 2px 6px;
+    font-size: 10px;
 }
 
 .boton-colapsar {
     position: absolute;
-    bottom: 2rem;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255,255,255,0.2);
@@ -264,7 +264,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .encabezado-lateral-derecho {
-    padding: 1.5rem;
+    padding: 24px;
     background: linear-gradient(135deg, var(--color-azul) 0%, #b8d9f0 100%);
     display: flex;
     justify-content: space-between;
@@ -288,10 +288,10 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .item-notificacion, .item-actividad, .item-paciente {
-    padding: 1rem 1.5rem;
+    padding: 16px 24px;
     border-bottom: 1px solid #e2e8f0;
     display: flex;
-    gap: 0.75rem;
+    gap: 12px;
     align-items: start;
 }
 
@@ -351,7 +351,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .barra-navegacion-superior {
     background: white;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
@@ -364,7 +364,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 .navegacion-izquierda {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .navegacion-izquierda span {
@@ -381,16 +381,16 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .buscador-navegacion input {
-    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    padding: 8px 16px 8px 40px;
     border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     width: 350px;
     font-size: var(--fs-titulo4);
 }
 
 .buscador-navegacion i {
     position: absolute;
-    left: 0.75rem;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-gris);
@@ -398,7 +398,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .acciones-navegacion {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
     align-items: center;
 }
 
@@ -407,7 +407,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
     height: 40px;
     border: none;
     background: #f1f5f9;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     cursor: pointer;
     position: relative;
     transition: all 0.3s;
@@ -426,29 +426,28 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .area-contenido {
-    padding: 2rem;
+    padding: 32px;
 }
 
 .tarjeta-bienvenida {
     background: linear-gradient(135deg, var(--color-verde) 0%, #b8eeb0 100%);
-    border-radius: 1rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    border-radius: 16px;
+    margin-bottom: 32px;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
 }
 
 .avatar-bienvenida {
     width: 120px;
     height: 120px;
-    border-radius: 1rem;
+    border-radius: 16px;
     object-fit: cover;
 }
 
 .tarjeta-bienvenida h2 {
     color: var(--color-primario);
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .tarjeta-bienvenida p {
@@ -458,9 +457,9 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .seccion-calendario {
     background: white;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -471,13 +470,13 @@ h5, h6 { font-size: var(--fs-titulo4); }
 .grilla-calendario {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1rem;
+    gap: 12px;
+    margin-top: 16px;
 }
 
 .dia-calendario {
     aspect-ratio: 1;
-    border-radius: 1rem;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -518,8 +517,8 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .seccion-linea-tiempo {
     background: white;
-    border-radius: 1rem;
-    padding: 1.5rem;
+    border-radius: 16px;
+    padding: 24px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -529,11 +528,11 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .item-linea-tiempo {
     display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    margin: 0.5rem 0;
+    gap: 16px;
+    padding: 16px;
+    margin: 8px 0;
     background: #f8fafc;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     align-items: center;
 }
 
@@ -609,4 +608,429 @@ h5, h6 { font-size: var(--fs-titulo4); }
 .icono-actividad-verde {
     background: #dcfce7;
     color: #22c55e;
+}
+
+/* ========================================
+   RESPONSIVE - MEDIA QUERIES
+   ======================================== */
+
+/* TABLET - 768px a 1024px */
+@media (max-width: 1024px) {
+    
+    /* Barra de navegación superior más compacta */
+    .barra-navegacion-superior {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .buscador-navegacion {
+        order: 3;
+        width: 100%;
+    }
+
+    .buscador-navegacion input {
+        width: 100%;
+    }
+
+    /* Área de contenido con menos padding */
+    .area-contenido {
+        padding: 24px;
+    }
+
+    /* Tarjeta de bienvenida más compacta */
+    .tarjeta-bienvenida {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .avatar-bienvenida {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tarjeta-bienvenida h2 {
+        font-size: var(--fs-titulo2);
+    }
+
+    /* Calendario con menos columnas */
+    .grilla-calendario {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Panel derecho ocupa más espacio */
+    .barra-lateral-derecha {
+        width: 300px;
+    }
+
+    .contenido-principal.panel-derecho-abierto {
+        margin-right: 300px;
+    }
+
+    /* Timeline más compacto */
+    .hora-linea-tiempo {
+        min-width: 80px;
+        font-size: var(--fs-texto1);
+    }
+}
+
+/* TABLET PEQUEÑA - 768px */
+@media (max-width: 768px) {
+    
+    /* Sidebar izquierdo siempre colapsado en móvil */
+    .barra-lateral-izquierda {
+        width: 80px;
+    }
+
+    .barra-lateral-izquierda:not(.expandida) .texto-marca-sidebar,
+    .barra-lateral-izquierda:not(.expandida) .texto-item-sidebar,
+    .barra-lateral-izquierda:not(.expandida) .pestanas-sidebar {
+        display: none;
+    }
+
+    .barra-lateral-izquierda:not(.expandida) .item-sidebar {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .barra-lateral-izquierda:not(.expandida) .seccion-sidebar {
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    /* Sidebar expandido en móvil toma más espacio */
+    .barra-lateral-izquierda.expandida {
+        width: 250px;
+        box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+    }
+
+    /* Contenido principal ajustado */
+    .contenido-principal {
+        margin-left: 80px;
+    }
+
+    .contenido-principal.sidebar-colapsado {
+        margin-left: 0;
+    }
+
+    /* Panel derecho ocupa toda la pantalla en móvil */
+    .barra-lateral-derecha {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contenido-principal.panel-derecho-abierto {
+        margin-right: 0;
+    }
+
+    /* Calendario con 4 columnas */
+    .grilla-calendario {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .dia-calendario small {
+        font-size: 10px;
+    }
+
+    .dia-calendario strong {
+        font-size: var(--fs-titulo3);
+    }
+
+    /* Navegación superior simplificada */
+    .navegacion-izquierda span:not(.fw-semibold) {
+        display: none;
+    }
+
+    .acciones-navegacion {
+        gap: 8px;
+    }
+
+    .boton-icono-navegacion {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Botón hamburguesa para menú */
+    .boton-menu-movil {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: var(--color-primario);
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+/* MÓVIL - Menos de 576px */
+@media (max-width: 576px) {
+    
+    /* Sidebar izquierdo oculto por defecto */
+    .barra-lateral-izquierda {
+        transform: translateX(-100%);
+        width: 250px;
+        transition: transform 0.3s ease;
+    }
+
+    .barra-lateral-izquierda.expandida {
+        transform: translateX(0);
+        box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* Contenido principal ocupa todo el ancho */
+    .contenido-principal {
+        margin-left: 0 !important;
+    }
+
+    /* Área de contenido con menos padding */
+    .area-contenido {
+        padding: 16px;
+    }
+
+    /* Barra de navegación superior */
+    .barra-navegacion-superior {
+        padding: 12px 16px;
+    }
+
+    .navegacion-izquierda {
+        gap: 12px;
+    }
+
+    .buscador-navegacion input {
+        font-size: var(--fs-texto1);
+        padding: 8px 12px 8px 32px;
+    }
+
+    .acciones-navegacion {
+        gap: 4px;
+    }
+
+    .boton-icono-navegacion {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    /* Tarjeta de bienvenida */
+    .tarjeta-bienvenida {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .avatar-bienvenida {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tarjeta-bienvenida h2 {
+        font-size: var(--fs-titulo3);
+    }
+
+    .tarjeta-bienvenida p {
+        font-size: var(--fs-titulo4);
+    }
+
+    /* Calendario compacto */
+    .seccion-calendario {
+        padding: 16px;
+    }
+
+    .seccion-calendario h4 {
+        font-size: var(--fs-titulo4);
+        margin-bottom: 12px !important;
+    }
+
+    .grilla-calendario {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .dia-calendario {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .dia-calendario small {
+        font-size: 9px;
+    }
+
+    .dia-calendario strong {
+        font-size: var(--fs-titulo4);
+    }
+
+    /* Timeline compacto */
+    .seccion-linea-tiempo {
+        padding: 16px;
+    }
+
+    .seccion-linea-tiempo h4 {
+        font-size: var(--fs-titulo4);
+    }
+
+    .item-linea-tiempo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .hora-linea-tiempo {
+        min-width: auto;
+        font-size: var(--fs-texto1);
+    }
+
+    .punto-linea-tiempo {
+        display: none;
+    }
+
+    .contenido-linea-tiempo strong {
+        font-size: var(--fs-texto1);
+    }
+
+    .contenido-linea-tiempo .text-muted {
+        font-size: 10px;
+    }
+
+    /* Panel derecho ocupa toda la pantalla */
+    .barra-lateral-derecha {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Items del panel derecho más compactos */
+    .item-notificacion,
+    .item-actividad,
+    .item-paciente {
+        padding: 12px 16px;
+    }
+
+    .icono-notificacion,
+    .icono-actividad {
+        width: 35px;
+        height: 35px;
+        font-size: var(--fs-titulo4);
+    }
+
+    .avatar-paciente {
+        width: 35px;
+        height: 35px;
+    }
+
+    .barra-lateral-derecha h6 {
+        font-size: var(--fs-texto1);
+    }
+
+    .barra-lateral-derecha .fw-semibold {
+        font-size: var(--fs-texto1);
+    }
+
+    .barra-lateral-derecha small {
+        font-size: 10px;
+    }
+
+    /* Ocultar botón de colapsar en móvil */
+    .boton-colapsar {
+        display: none;
+    }
+
+    /* Pestañas del sidebar en columna */
+    .barra-lateral-izquierda.expandida .pestanas-sidebar {
+        flex-direction: column;
+    }
+
+    .barra-lateral-izquierda.expandida .pestana-sidebar {
+        width: 100%;
+    }
+}
+
+/* MÓVIL PEQUEÑO - Menos de 375px */
+@media (max-width: 375px) {
+    
+    /* Ajustes extremos para pantallas muy pequeñas */
+    .area-contenido {
+        padding: 12px;
+    }
+
+    .tarjeta-bienvenida {
+        padding: 12px;
+    }
+
+    .avatar-bienvenida {
+        width: 60px;
+        height: 60px;
+    }
+
+    .grilla-calendario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seccion-calendario h4,
+    .seccion-linea-tiempo h4 {
+        font-size: 13px;
+    }
+
+    .barra-navegacion-superior {
+        padding: 8px 12px;
+    }
+
+    .boton-icono-navegacion {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+    UTILIDADES RESPONSIVE
+   ======================================== */
+
+/* Botón para abrir menú en móvil */
+.boton-menu-movil {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .boton-menu-movil {
+        display: block;
+    }
+}
+
+/* Overlay para cerrar sidebars en móvil */
+.overlay-movil {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.overlay-movil.activo {
+    display: block;
+}
+
+/* Mejoras de scroll en móvil */
+@media (max-width: 768px) {
+    .barra-lateral-izquierda,
+    .barra-lateral-derecha {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Optimización de tipografía en móvil */
+@media (max-width: 576px) {
+    :root {
+        --fs-titulo1: 24px;
+        --fs-titulo2: 20px;
+        --fs-titulo3: 14px;
+        --fs-titulo4: 12px;
+        --fs-texto: 14px;
+        --fs-texto1: 11px;
+    }
 }
