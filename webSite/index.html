@@ -4,12 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetWilling - Home</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/webSite/img/FAVICON.png" type="image">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../assets/website/css/style-home.css">
 </head>
 <body>
     
     <header>
-        
+
+                    <nav class="navbar navbar-expand-lg bg-white custom-navbar  w-100 m-0 p-0">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/webSite/img/LOGO-PRINCIPAL.png" alt="VetWilling">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-dark fw-semibold" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link text-dark fw-semibold" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a href="../extras/login.html" id="btn-ingresar" class="btn btn-success px-4 fw-semibold">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="hero">
+
+
+            <div class="container container-hero">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h2 class="fw-bold  mb-3">Profesional en cuidado y salud de las mascotas</h2>
+                        <p class="text-muted mb-4">
+                            En VetWilling creemos en el bienestar integral <br>
+                            de las mascotas.
+                            Nuestro equipo combina experiencia y tecnología 
+                            <br>para ofrecer una aplicación de atención veterinaria
+                            de calidad.
+                        </p>
+                        <div id="cont-btn-hero-left">
+                        <a href="#" class="btn btn-success px-4 py-2 fw-semibold">Contáctanos</a>
+                        <a href="#" id="btn-hero-right" class="btn btn-success px-4 py-2 fw-semibold">Veterinarias</a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <img src="../assets/website/img/imagen de index.png" alt="Nosotros"
+                            class="img-fluid rounded-4  about-img">
+                    </div>
+                </div>
+            </div>
+            <div class="curva-inferior"></div>
+        </section>
+
     </header>
 
+    <footer id="footer">
+        <div class="container-footer">
+            <div class="footer-col logo">
+                <img src="../assets/webSite/img/LOGO-VERTICAL.png" alt="VetWilling Logo" class="footer-logo">
+            </div>
+
+            <div class="footer-col services">
+                <h4>Services</h4>
+                <ul>
+                    <li>Consultas generales</li>
+                    <li>Vacunación y desparasitación</li>
+                    <li>Urgencias 24/7</li>
+                    <li>Cirugías y hospitalización</li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact">
+                <p><i class="bi bi-envelope-fill"></i> vetWilling@gmail.com</p>
+                <p><i class="bi bi-telephone-fill"></i> +57 310 8968615</p>
+                <p><i class="bi bi-clock-fill"></i> Horario: Lunes a Sábado 8:00am - 8:00pm</p>
+            </div>
+
+            <div class="footer-col social">
+                <h4>Redes sociales</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>
