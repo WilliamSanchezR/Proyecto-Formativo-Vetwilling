@@ -258,13 +258,12 @@ body {
     }
 
     #hero{
-        height: 95vh;
+        height: 98vh;
         text-align: center;
         align-items: center;
     }
 
     #hero .container-hero{
-        margin-top: 100px;
         padding: 0 25px;
     }
 
