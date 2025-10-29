@@ -112,6 +112,11 @@ main {
     cursor: pointer;
 }
 
+#btn_ingresar a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
 
 .cont-rigth {
     background-image: url('../img/fondoLogin.png');
