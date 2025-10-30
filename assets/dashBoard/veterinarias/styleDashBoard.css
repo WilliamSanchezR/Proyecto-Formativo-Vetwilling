@@ -85,7 +85,6 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .marca-sidebar {
-    padding: 24px;
     color: white;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     display: flex;
@@ -95,6 +94,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .marca-sidebar img {
     font-size: 30px;
+    right: 10px;
 }
 
 .texto-marca-sidebar {
@@ -226,9 +226,9 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .boton-colapsar {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
+    position: relative ;
+    bottom: 10px;
+    left: 40%;
     transform: translateX(-50%);
     background: rgba(255,255,255,0.2);
     border: none;
@@ -265,7 +265,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 
 .encabezado-lateral-derecho {
     padding: 24px;
-    background: linear-gradient(135deg, var(--color-azul) 0%, #b8d9f0 100%);
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-verde) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -275,7 +275,7 @@ h5, h6 { font-size: var(--fs-titulo4); }
 }
 
 .encabezado-lateral-derecho h5 {
-    color: var(--color-gris);
+    color: var(--color-fondo);
     font-family: 'Fredoka', sans-serif;
 }
 
@@ -412,6 +412,10 @@ h5, h6 { font-size: var(--fs-titulo4); }
     position: relative;
     transition: all 0.3s;
     color: var(--color-gris);
+}
+.boton-icono-navegacion a {
+    color: var(--color-gris);
+    text-decoration: none;
 }
 
 .boton-icono-navegacion:hover {
