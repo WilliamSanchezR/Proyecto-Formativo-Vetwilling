@@ -1,25 +1,24 @@
-/* tipografias */
+/* ========================================
+   1. IMPORTS
+======================================== */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-
-
-/* 1. Tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-/* estilos para barra de nav */
+/* ========================================
+   2. ESTILOS GLOBALES
+======================================== */
 * {
     scrollbar-width: none;
 }
 
 body {
     background: linear-gradient(150deg, #ffffff 0%, #f5fff5 30%, #0A932C 100%);
-    background: #0A932C;
 }
 
-/* Navbar */
-
+/* ========================================
+   3. NAVBAR
+======================================== */
 .navbar {
     box-shadow: 0px -11px 25px 0 rgba(0, 0, 0, 0.65);
 }
@@ -51,16 +50,19 @@ body {
     background-color: #0A932C !important;
 }
 
-/* Hero Section */
+/* ========================================
+   4. HERO SECTION (PRINCIPAL)
+======================================== */
 #hero {
     width: 100%;
     height: 110vh;
     padding-top: 200px;
+    padding-bottom: 10px;
     position: relative;
     background: #fff;
-    padding-bottom: 10px;
     border-radius: 0 0 140px 0;
-    z-index: 3;
+    z-index: 4;
+    border: 1px solid #0A932C;
 }
 
 #hero h2 {
@@ -76,7 +78,7 @@ body {
     color: #555;
 }
 
-#cont-btn-hero-left{
+#cont-btn-hero-left {
     width: 100%;
     display: flex;
     margin-top: 50px;
@@ -88,7 +90,8 @@ body {
     transition: all 0.3s ease;
     text-align: center;
 }
-#btn-hero-right{
+
+#btn-hero-right {
     margin-left: 20px;
 }
 
@@ -97,7 +100,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Imagen */
 .about-img {
     max-width: 70%;
     transition: transform 0.3s ease;
@@ -107,18 +109,63 @@ body {
     transform: scale(1.03);
 }
 
-/* Sección de módulos */
+/* ========================================
+   5. SECCIÓN SOBRE NOSOTROS
+======================================== */
+#sobre-nosotros {
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    background: #fff;
+    border-radius: 0 0 140px 0;
+    z-index: 3;
+    padding-top: 220px;
+    margin-top: -130px;
+}
+
+#sobre-nosotros h2 {
+    color: #0A932C;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: "Fredoka", sans-serif;
+}
+
+#sobre-nosotros p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+#sobre-nosotros .btn-success {
+    background-color: #0A932C !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#sobre-nosotros .btn-success:hover {
+    background-color: #0A932C !important;
+    transform: scale(1.05);
+}
+
+#sobre-nosotros .about-img {
+    max-width: 90%;
+}
+
+/* ========================================
+   6. SECCIÓN MÓDULOS
+======================================== */
 #modulos {
+    width: 100%;
     position: relative;
     background-color: #0A932C;
     overflow: hidden;
     margin-top: -145px;
-    padding-top: 190px !important;
+    padding-top: 220px !important;
+    padding-bottom: 50px;
     border-radius: 0 0 140px 0;
     z-index: 2;
 }
 
-/* Texto */
 #modulos h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -130,15 +177,185 @@ body {
     color: #f8f9fa;
 }
 
+.modulo-card {
+    background-color: #9DE795;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* esto no mas es el fouter */
+.modulo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
 
+.modulo-card h5 {
+    color: #424B54;
+}
+
+/* ========================================
+   7. SECCIÓN PRECIOS
+======================================== */
+#precios {
+    width: 100%;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    margin-top: -145px;
+    padding-top: 250px !important;
+    margin-bottom: -122px;
+    padding-bottom: 130px !important;
+    z-index: 1;
+}
+
+#precios h2 {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3rem;
+}
+
+.plan {
+    background-color: #fff;
+    border: 2px solid #000 !important;
+    border-radius: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.plan .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.plan i {
+    color: #0A932C;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.plan:hover {
+    border-color: #0A932C !important;
+    background-color: #0A932C;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
+    transform: translateY(-5px);
+}
+
+.plan:hover i {
+    color: #fff;
+}
+
+.plan button {
+    background-color: transparent;
+    color: #000;
+    font-weight: 600;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+}
+
+.plan:hover button {
+    background-color: #fff;
+    color: #0A932C;
+    border-color: #fff;
+}
+
+/* ========================================
+   8. SECCIÓN EQUIPO
+======================================== */
+#equipo {
+    width: 100%;
+    background-color: #1b9e3e;
+    border-radius: 140px 0 0 0;
+    padding: 100px 0 60px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-top: -20px;
+    z-index: 1;
+}
+
+#equipo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.container-equipo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipo-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card-equipo {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-equipo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-equipo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-equipo .info {
+    padding: 15px;
+}
+
+.card-equipo h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-equipo p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #1b9e3e;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0f6828;
+    transform: scale(1.1);
+}
+
+/* ========================================
+   9. FOOTER
+======================================== */
 #footer {
-    background: #ffffff;   
+    background: #ffffff;
     padding: 40px 0;
     font-family: 'Poppins', sans-serif;
     color: #1b9e3e;
-    margin-top: 100px;
     box-shadow: 0px 6px 25px 4px rgba(0, 0, 0, 0.65);
 }
 
@@ -195,27 +412,13 @@ body {
     font-size: 1.1rem;
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
+/* ========================================
+   10. MEDIA QUERIES
+======================================== */
 
-.social-icons a {
-    color: #1b9e3e;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #0f6828;
-    transform: scale(1.1);
-}
-
-/* Responsive */
+/* Tablets y pantallas medianas */
 @media (max-width: 999px) {
-
-    .navbar .container{ 
+    .navbar .container {
         --bs-gutter-x: 0;
     }
 
@@ -235,9 +438,6 @@ body {
     .navbar-toggler:hover {
         background-color: #0A932C !important;
         color: #fff !important;
-        position: absolute;
-        top: 25px;
-        right: 16px;
     }
 
     .navbar-nav {
@@ -245,7 +445,7 @@ body {
         --bs-nav-link-padding-y: 2px;
     }
 
-    .navbar-collapse{
+    .navbar-collapse {
         width: 100%;
         background: #fff;
         box-shadow: 0px 20px 25px -11px rgba(0, 0, 0, 0.65);
@@ -253,38 +453,45 @@ body {
         border-radius: 0 0 30px 30px;
     }
 
-    .navbar-nav li{
+    .navbar-nav li {
         margin: 5px 0;
     }
 
-    #hero{
+    #hero,
+    #sobre-nosotros {
         height: 98vh;
         text-align: center;
         align-items: center;
     }
 
-    #hero .container-hero{
+    #hero .container-hero {
         padding: 0 25px;
     }
 
-    #cont-btn-hero-left{
+    #cont-btn-hero-left {
         margin-top: 70px;
     }
 
-    #hero .btn-success {
-    width: 100%;
+    #hero .btn-success,
+    #btn-ingresar {
+        width: 100%;
     }
 
-    #btn-ingresar{
-    width: 100%;
-    }
-
-    #hero .about-img{
+    #hero .about-img,
+    #sobre-nosotros .about-img {
         margin-top: 40px;
         max-width: 80%;
     }
+}
 
-    #footer{
+/* Móviles */
+@media (max-width: 768px) {
+    #modulos h2,
+    #modulos p {
+        text-align: center;
+    }
+
+    #footer {
         height: 90vh;
     }
 
