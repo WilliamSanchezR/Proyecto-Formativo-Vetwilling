@@ -41,7 +41,7 @@ main {
     align-items: center;
     gap: 28px;
     background-color: var(--white-color);
-    box-shadow: 0px 0px 46.2px #00000040;
+    box-shadow: 0px 0px 20px #00000025;
     border-radius: 46px;
     padding: 40px;
     width: 63%;
