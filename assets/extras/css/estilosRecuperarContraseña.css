@@ -1,3 +1,52 @@
+/* 1. Tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/* 2. Colores */
+:root {
+    --primary-color: #0A932C;
+    /* Color principal de la marca.*/
+    --white-color: #FFFFFF;
+    /*Color blanco*/
+    --green-background: #9DE795;
+    /* Ideal para fondos, detalles secundarios y refuerzos visuales.*/
+    --neutral-color: #424B54;
+    /* Color neutro, utilizado en tipografías y elementos secundarios.*/
+    --light-color: #93BEDF;
+    /* Se recomienda para destacar elementos sin perder armonía.*/
+}
+
+/* 3. Botones */
+
+/* 4. Campos */
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+/* 5. Titulos */
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Fredoka", sans-serif;
+    margin: 0px;
+}
+
+/* 6. Labels */
+
+/* 7. Parrafos */
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     padding: 0px;
     height: 100%;
@@ -112,7 +161,7 @@ main {
     cursor: pointer;
 }
 
-#btn_ingresar a{
+#btn_ingresar a {
     text-decoration: none;
     color: var(--white-color);
 }
@@ -166,6 +215,38 @@ main {
     bottom: 5%;
 }
 
+
+/* Ajuste específico para la página de recuperación */
+.form h2 {
+    color: var(--neutral-color);
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#btn_ingresar {
+    background-color: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+#btn_ingresar:hover {
+    background-color: var(--green-background);
+    color: var(--neutral-color);
+}
+
+#recover {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--neutral-color);
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+#recover:hover {
+    color: var(--primary-color);
+}
+
+
 /* TABLET estilos responsil table*/
 @media screen and (min-width:768px) and (max-width:1080px) {
     .container {
@@ -204,7 +285,7 @@ main {
         flex-direction: column;
     }
 
-    .cont-rigth p{
+    .cont-rigth p {
         width: 100%;
         margin: 0px;
     }
