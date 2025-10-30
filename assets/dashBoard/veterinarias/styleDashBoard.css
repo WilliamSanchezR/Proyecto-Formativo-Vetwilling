@@ -97,6 +97,40 @@ h5, h6 { font-size: var(--fs-titulo4); }
     right: 10px;
 }
 
+/* Logo completo - visible por defecto */
+
+.marca-sidebar .logoDas {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Logo icono - oculto por defecto */
+
+.marca-sidebar .logo-icono-sidebar {
+    display: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Cuando el sidebar está colapsado */
+
+.barra-lateral-izquierda.colapsada .marca-sidebar .logoDas:not(.logo-icono-sidebar) {
+    display: none;
+}
+
+.barra-lateral-izquierda.colapsada .marca-sidebar .logo-icono-sidebar {
+    display: block;
+}
+
+/* Animación suave al cambiar */
+
+.marca-sidebar span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .texto-marca-sidebar {
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
