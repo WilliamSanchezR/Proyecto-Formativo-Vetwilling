@@ -4,7 +4,6 @@ main {
 
 .cont-error-404 {
     background-color: var(--primary-color);
-    height: 100%;
 }
 
 .cont {
@@ -40,8 +39,19 @@ main {
     text-align: center;
 }
 
+/* TABLET estilos responsil table*/
+@media screen and (min-width:768px) and (max-width:1080px) {
+    .cont-error-404 {
+        height: 100%;
+    }
+}
+
 /* SMARTPHONE estilos responsil de cel*/
 @media screen and (min-width:320px) and (max-width:767px) {
+
+    .cont-error-404 {
+        height: 100%;
+    }
 
     .img {
         width: 100%;
