@@ -1,0 +1,221 @@
+/* Tabla de laboratorio */
+.contenedor-tabla-laboratorio {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.tabla-laboratorio {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-laboratorio thead {
+    background: #f8fcf8;
+}
+
+.tabla-laboratorio th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-gris);
+    font-size: var(--fs-titulo4);
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tabla-laboratorio td {
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: var(--fs-titulo4);
+    color: var(--color-gris);
+}
+
+.tabla-laboratorio tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.tabla-laboratorio tbody tr:hover {
+    background: #f8fafc;
+}
+
+.info-laboratorio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-tabla-laboratorio {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+
+.nombre-laboratorio {
+    font-weight: 600;
+    color: var(--color-gris);
+    font-size: var(--fs-titulo4);
+}
+
+.info-laboratorio small {
+    font-size: var(--fs-texto1);
+}
+
+/* Acciones de tabla */
+.acciones-tabla {
+    display: flex;
+    gap: 8px;
+}
+
+.boton-accion-tabla {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--color-gris);
+    font-size: var(--fs-titulo4);
+}
+
+.boton-accion-tabla:hover {
+    background: var(--color-verde);
+    color: var(--color-primario);
+    transform: translateY(-2px);
+}
+
+/* Paginación */
+.paginacion-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-paginacion {
+    color: var(--color-gris);
+    font-size: var(--fs-titulo4);
+}
+
+.pagination {
+    display: flex;
+    gap: 4px;
+}
+
+.page-link {
+    color: var(--color-gris);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: var(--fs-titulo4);
+}
+
+.page-link:hover {
+    background: var(--color-verde);
+    color: var(--color-primario);
+    border-color: var(--color-verde);
+}
+
+.page-item.active .page-link {
+    background: var(--color-primario);
+    color: white;
+    border-color: var(--color-primario);
+}
+
+.page-item.disabled .page-link {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .contenedor-tabla-veterinaria {
+        padding: 16px;
+    }
+
+    .tabla-veterinaria {
+        font-size: var(--fs-texto1);
+    }
+
+    .tabla-veterinaria th,
+    .tabla-veterinaria td {
+        padding: 12px 8px;
+    }
+
+    .nombre-laboratorio {
+        font-size: var(--fs-texto1);
+    }
+
+    .paginacion-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .tarjeta-estadistica h3 {
+        font-size: var(--fs-titulo3);
+    }
+
+    .tarjeta-estadistica p {
+        font-size: var(--fs-texto1);
+    }
+
+    .boton-accion-primario,
+    .boton-accion-secundario {
+        width: 100%;
+        justify-content: center;
+        font-size: var(--fs-texto1);
+    }
+
+    .filtro-select {
+        width: 100%;
+        font-size: var(--fs-texto1);
+    }
+
+    .tabla-veterinaria {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .avatar-tabla-laboratorio {
+        width: 35px;
+        height: 35px;
+    }
+
+    .boton-accion-tabla {
+        width: 30px;
+        height: 30px;
+        font-size: var(--fs-texto1);
+    }
+
+    .info-paginacion {
+        font-size: var(--fs-texto1);
+    }
+
+    .page-link {
+        font-size: var(--fs-texto1);
+        padding: 6px 10px;
+    }
+}
