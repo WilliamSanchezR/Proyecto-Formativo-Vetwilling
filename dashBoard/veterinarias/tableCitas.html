@@ -6,38 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard Veterinario - Citas</title>
 
-   <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    
+
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
-    
+
     <!-- Tus CSS -->
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleTableCitas.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
 
 </head>
 
 <body>
-
     <!-- BARRA LATERAL IZQUIERDA -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
         <div class="marca-sidebar">
-            <i class="bi bi-person-circle"></i>
-            <span class="texto-marca-sidebar">ByeWind</span>
-        </div>
-
-        <div class="pestanas-sidebar">
-            <button class="pestana-sidebar active">Favoritos</button>
-            <button class="pestana-sidebar">Recientes</button>
+            <span class=""><img src="../../assets/webSite/img/LOGO-POSITIVO.png" alt="logo" class="logoDas" width="200">
+                <img src="../../assets/dashBoard/veterinarias/img/LOGO-VERTICAL-POSITIVA-DASHBOARD.png" alt="logo"
+                    class="logoDas logo-icono-sidebar" width="40"></span>
         </div>
 
         <div class="menu-sidebar">
-            <div class="seccion-sidebar">•</div>
-            <a href="#" class="item-sidebar">
+            <div class="seccion-sidebar">Menu</div>
+            <a href="dashBoardPacientes.html" class="item-sidebar">
                 <i class="bi bi-heart"></i>
                 <span class="texto-item-sidebar">Pacientes</span>
             </a>
@@ -45,31 +41,20 @@
                 <i class="bi bi-arrow-repeat"></i>
                 <span class="texto-item-sidebar">Seguimientos</span>
             </a>
-
-            <div class="seccion-sidebar">Menu</div>
-            <a href="dashBoard.html" class="item-sidebar ">
+            <a href="../veterinarias/dashBoard.html" class="item-sidebar">
                 <i class="bi bi-speedometer2"></i>
                 <span class="texto-item-sidebar">Dashboard</span>
             </a>
-            <a href="#" class="item-sidebar active">
+            <a href="tableCitas.html" class="item-sidebar">
                 <i class="bi bi-calendar-check"></i>
                 <span class="texto-item-sidebar">Citas</span>
             </a>
-            <a href="#" class="item-sidebar">
+            <a href="dashBoardLaboratorio.html" class="item-sidebar">
                 <i class="bi bi-flask"></i>
                 <span class="texto-item-sidebar">Laboratorio</span>
             </a>
 
             <div class="seccion-sidebar">Opciones</div>
-            <a href="#" class="item-sidebar">
-                <i class="bi bi-person-badge"></i>
-                <span class="texto-item-sidebar">Perfil usuario</span>
-                <i class="bi bi-chevron-right ms-auto"></i>
-            </a>
-            <a href="#" class="item-sidebar">
-                <i class="bi bi-sticky"></i>
-                <span class="texto-item-sidebar">Notas</span>
-            </a>
             <a href="#" class="item-sidebar">
                 <i class="bi bi-person-plus"></i>
                 <span class="texto-item-sidebar">Registro Usuario</span>
@@ -251,8 +236,7 @@
                     <i class="bi bi-arrow-counterclockwise"></i>
                 </button>
                 <button class="boton-icono-navegacion">
-                    <i class="bi bi-bell"></i>
-                    <span class="badge bg-danger">3</span>
+                    <i class="bi bi-person-circle"></i>
                 </button>
                 <button class="boton-icono-navegacion" onclick="alternarBarraDerecha()">
                     <i class="bi bi-chevron-left"></i>
@@ -602,27 +586,28 @@
                             </td>
                         </tr>
 
-                           <!-- PAGINACIÓN -->
-            <div class="paginacion-contenedor">
-                <div class="info-paginacion">
-                    Mostrando <strong>1-5</strong> de <strong>248</strong> pacientes
-                </div>
-                <nav>
-                    <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">50</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                        <!-- PAGINACIÓN -->
+                        <div class="paginacion-contenedor">
+                            <div class="info-paginacion">
+                                Mostrando <strong>1-5</strong> de <strong>248</strong> pacientes
+                            </div>
+                            <nav>
+                                <ul class="pagination mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">50</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                                      
+                        </div>
                     </tbody>
                 </table>
             </div>
