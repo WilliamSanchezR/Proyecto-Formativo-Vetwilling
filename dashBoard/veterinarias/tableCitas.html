@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard Veterinario - Citas</title>
+    <title>Dashboard Veterinario - Citas</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,22 +12,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
 
     <!-- Tus CSS -->
+         <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleTableCitas.css">
-    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
-
 </head>
 
 <body>
     <!-- BARRA LATERAL IZQUIERDA -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
         <div class="marca-sidebar">
-            <span class=""><img src="../../assets/webSite/img/LOGO-POSITIVO.png" alt="logo" class="logoDas" width="200">
-                <img src="../../assets/dashBoard/veterinarias/img/LOGO-VERTICAL-POSITIVA-DASHBOARD.png" alt="logo"
-                    class="logoDas logo-icono-sidebar" width="40"></span>
+            <span>
+                <img src="../../assets/webSite/img/LOGO-POSITIVO.png" alt="logo" class="logoDas" width="200">
+                <img src="../../assets/dashBoard/veterinarias/img/LOGO-VERTICAL-POSITIVA-DASHBOARD.png" alt="logo" class="logoDas logo-icono-sidebar" width="40">
+            </span>
         </div>
 
         <div class="menu-sidebar">
@@ -73,7 +76,7 @@
             </a>
             <a href="../../index.html" class="item-sidebar">
                 <i class="bi bi-box-arrow-in-left"></i>
-                <span class="texto-item-sidebar">Cerrar Seción</span>
+                <span class="texto-item-sidebar">Cerrar Sesión</span>
             </a>
         </div>
 
@@ -107,17 +110,8 @@
                     <i class="bi bi-person-plus"></i>
                 </div>
                 <div>
-                    <div class="fw-semibold">Nuevo pasciente asignado</div>
+                    <div class="fw-semibold">Nuevo paciente asignado</div>
                     <small class="text-muted">Hace 52 min</small>
-                </div>
-            </div>
-            <div class="item-notificacion">
-                <div class="icono-notificacion icono-notificacion-azul">
-                    <i class="bi bi-bug-fill"></i>
-                </div>
-                <div>
-                    <div class="fw-semibold">Paciente con parasitos</div>
-                    <small class="text-muted">Hace 12 h</small>
                 </div>
             </div>
         </div>
@@ -142,33 +136,6 @@
                     <small class="text-muted">Hace 59 min</small>
                 </div>
             </div>
-            <div class="item-actividad">
-                <div class="icono-actividad icono-actividad-rojo">
-                    <i class="bi bi-bandaid"></i>
-                </div>
-                <div>
-                    <div class="fw-semibold">Programación cirugía</div>
-                    <small class="text-muted">Hace 12 horas</small>
-                </div>
-            </div>
-            <div class="item-actividad">
-                <div class="icono-actividad icono-actividad-azul">
-                    <i class="bi bi-heart-pulse"></i>
-                </div>
-                <div>
-                    <div class="fw-semibold">Consulta general</div>
-                    <small class="text-muted">Ayer, 7 am</small>
-                </div>
-            </div>
-            <div class="item-actividad">
-                <div class="icono-actividad icono-actividad-verde">
-                    <i class="bi bi-capsule"></i>
-                </div>
-                <div>
-                    <div class="fw-semibold">Cirugía</div>
-                    <small class="text-muted">Feb 2, 2025</small>
-                </div>
-            </div>
         </div>
 
         <div class="p-3 border-top">
@@ -185,30 +152,6 @@
                     <div class="fw-semibold">Drew Cano</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=3" alt="Paciente" class="avatar-paciente">
-                <div class="flex-grow-1">
-                    <div class="fw-semibold">Andi Lane</div>
-                </div>
-            </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=4" alt="Paciente" class="avatar-paciente">
-                <div class="flex-grow-1">
-                    <div class="fw-semibold">Koray Okumus</div>
-                </div>
-            </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=5" alt="Paciente" class="avatar-paciente">
-                <div class="flex-grow-1">
-                    <div class="fw-semibold">Kate Morrison</div>
-                </div>
-            </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=6" alt="Paciente" class="avatar-paciente">
-                <div class="flex-grow-1">
-                    <div class="fw-semibold">Melody Macy</div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -221,7 +164,7 @@
                     <i class="bi bi-star text-warning"></i>
                     <span class="fw-semibold">Dashboards</span>
                     <span class="text-muted">/</span>
-                    <span>Por defecto</span>
+                    <span>Gestión de Citas</span>
                 </div>
             </div>
             <div class="buscador-navegacion">
@@ -244,7 +187,6 @@
             </div>
         </div>
 
-        <!-- ÁREA DE CONTENIDO -->
         <!-- ÁREA DE CONTENIDO - MÓDULO GESTIÓN DE CITAS -->
         <div class="area-contenido">
 
@@ -258,12 +200,12 @@
                 <div class="controles-izquierda">
                     <div class="campo-buscar">
                         <i class="bi bi-search"></i>
-                        <input type="text" id="buscarCitas" placeholder="Buscar">
+                        <input type="text" id="buscarCitas" placeholder="Buscar citas...">
                     </div>
                 </div>
                 <div class="controles-derecha">
                     <button class="btn-control" id="btnVer">
-                        <i class="bi bi-eye"></i> Ver 9/12
+                        <i class="bi bi-eye"></i> Ver 0/0
                     </button>
                     <button class="btn-control" id="btnFiltrar">
                         <i class="bi bi-funnel"></i> Filtrar
@@ -282,7 +224,7 @@
 
             <!-- Tabla de Citas -->
             <div class="contenedor-tabla">
-                <table id="tablaCitas" class="tabla-citas" style="width:100%">
+                <table id="tablaCitas" class="display" style="width:100%">
                     <thead>
                         <tr>
                             <th>ID Perfil</th>
@@ -297,7 +239,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="fila-azul">
+                        <tr class="fila-gris">
                             <td>56H98</td>
                             <td>Th,15 Au</td>
                             <td>Juan Perez</td>
@@ -315,7 +257,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
+                        <tr class="fila-blanca">
                             <td>53D12</td>
                             <td>Mo,28 Jul</td>
                             <td>Laura Gomez</td>
@@ -333,10 +275,10 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-blanca">
+                        <tr class="fila-gris">
                             <td>53D12</td>
                             <td>Mo,28 Jul</td>
-                            <td>Alex Cortez</td>
+                            <td>Alexe Cortez</td>
                             <td>Hámster</td>
                             <td>312 485 7456</td>
                             <td>Calle 4 # 5-61 Villeta</td>
@@ -351,7 +293,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
+                        <tr class="fila-blanca">
                             <td>52D12</td>
                             <td>Mo,28 Jul</td>
                             <td>Steve Méndez</td>
@@ -369,7 +311,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-blanca">
+                        <tr class="fila-gris">
                             <td>54D23</td>
                             <td>We,2 Au</td>
                             <td>Sara Sanchez</td>
@@ -387,7 +329,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
+                        <tr class="fila-blanca">
                             <td>16H24</td>
                             <td>Mo,28 Jul</td>
                             <td>William Rojas</td>
@@ -405,7 +347,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-blanca">
+                        <tr class="fila-gris">
                             <td>18H24</td>
                             <td>Mo,28 Jul</td>
                             <td>Sofia Camelo</td>
@@ -423,7 +365,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
+                        <tr class="fila-blanca">
                             <td>27H18</td>
                             <td>Mo,28 Jul</td>
                             <td>Dilan Muñoz</td>
@@ -441,7 +383,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-blanca">
+                        <tr class="fila-gris">
                             <td>16H19</td>
                             <td>Mo,28 Jul</td>
                             <td>Jorge Cortez</td>
@@ -459,7 +401,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
+                        <tr class="fila-blanca">
                             <td>23G21</td>
                             <td>Mo,28 Jul</td>
                             <td>Luisa Muñoz</td>
@@ -477,161 +419,28 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="fila-verde">
-                            <td>23G21</td>
-                            <td>Mo,28 Jul</td>
-                            <td>Luisa Muñoz</td>
-                            <td>Hámster</td>
-                            <td>312 485 7456</td>
-                            <td>Calle 7 # 5-61 Bogotá</td>
-                            <td>Vacunación</td>
-                            <td>Note</td>
-                            <td>
-                                <button class="btn-accion btn-editar" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </button>
-                                <button class="btn-accion btn-eliminar" title="Eliminar">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-
-                        <!-- PAGINACIÓN -->
-                        <div class="paginacion-contenedor">
-                            <div class="info-paginacion">
-                                Mostrando <strong>1-5</strong> de <strong>248</strong> pacientes
-                            </div>
-                            <nav>
-                                <ul class="pagination mb-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
-                                    </li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">50</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
-                                    </li>
-                                </ul>
-                            </nav>
-                                      
-                        </div>
                     </tbody>
                 </table>
             </div>
 
         </div>
     </div>
-    <!-- AL FINAL DEL BODY, ANTES DE CERRAR </body> -->
 
-    <!-- 1. jQuery PRIMERO (obligatorio) -->
+    <!-- SCRIPTS -->
+    <!-- 1. jQuery PRIMERO -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- 2. Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 3. DataTables JS (requiere jQuery) -->
-    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <!-- 3. DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
-    <!-- 4. Tu script de dashboard primero -->
+    <!-- 4. Script de dashboard -->
     <script src="../../assets/dashBoard/veterinarias/dashBoard.js"></script>
 
-    <!-- 5. Tu script de tabla AL FINAL -->
+    <!-- 5. Script de tabla AL FINAL -->
     <script src="../../assets/dashBoard/veterinarias/tableCitas.js"></script>
-</body>
 
+</body>
 </html>
