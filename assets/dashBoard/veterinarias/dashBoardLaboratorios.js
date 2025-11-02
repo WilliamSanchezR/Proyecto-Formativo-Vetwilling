@@ -14,7 +14,7 @@ function CrearTablaPacientes(listaPacientes) {
         fila.setAttribute("data-bs-whatever", "@mdo");
 
         fila.innerHTML = `
-            <td></td>
+            <td><i class="bi bi-search"></i></td>
             <td>${paciente.folio}</td>
             <td>${paciente.fecha}</td>
             <td>${paciente.propietario}</td>
