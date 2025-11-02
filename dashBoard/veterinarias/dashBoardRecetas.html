@@ -4,27 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard Veterinario</title>
+    <title>DashBoard Veterinario - Recetas</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    <!-- Bootstrap Iconos -->
-
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- Propio -->
+    <!-- DataTables CSS -->
     <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
+
+    <!-- Tus CSS -->
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleTableCitas.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
-
 </head>
 
 <body>
-
     <!-- BARRA LATERAL IZQUIERDA -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
         <div class="marca-sidebar">
@@ -32,6 +32,7 @@
                 <img src="../../assets/dashBoard/veterinarias/img/LOGO-VERTICAL-POSITIVA-DASHBOARD.png" alt="logo"
                     class="logoDas logo-icono-sidebar" width="40"></span>
         </div>
+
 
         <div class="menu-sidebar">
             <div class="seccion-sidebar">Menu</div>
@@ -43,7 +44,7 @@
                 <i class="bi bi-arrow-repeat"></i>
                 <span class="texto-item-sidebar">Seguimientos</span>
             </a>
-            <a href="../veterinarias/dashBoardPacientes.html" class="item-sidebar active">
+            <a href="../veterinarias/dashBoardPacientes.html" class="item-sidebar">
                 <i class="bi bi-heart"></i>
                 <span class="texto-item-sidebar">Pacientes</span>
             </a>
@@ -69,7 +70,7 @@
                 <i class="bi bi-file-earmark-text"></i>
                 <span class="texto-item-sidebar">Reportes</span>
             </a>
-            <a href="../veterinarias/dashBoardRecetas.html" class="item-sidebar">
+            <a href="../veterinarias/dashBoardRecetas.html" class="item-sidebar active">
                 <i class="bi bi-receipt"></i>
                 <span class="texto-item-sidebar">Recetas</span>
             </a>
@@ -221,7 +222,7 @@
             <div class="navegacion-izquierda">
                 <div class="d-flex align-items-center gap-2">
                     <i class="bi bi-star text-warning"></i>
-                    <span class="fw-semibold">Dashboards</span>
+                    <span class="fw-semibold">Recetas</span>
                     <span class="text-muted">/</span>
                     <span>Por defecto</span>
                 </div>
@@ -247,121 +248,26 @@
         </div>
 
         <!-- ÁREA DE CONTENIDO -->
-        <div class="area-contenido">
-            <!-- TARJETA DE BIENVENIDA -->
-            <div class="tarjeta-bienvenida">
-                <img src="../../assets/dashBoard/veterinarias/img/retrato-doctora-3d 1.png" alt="Avatar"
-                    class="avatar-bienvenida">
-                <div>
-                    <h2>Bienvenido, Dr Chapatin</h2>
-                    <p class="mb-0">Ten un buena día de trabajo :)</p>
-                </div>
-            </div>
 
-            <!-- CALENDARIO -->
-            <div class="seccion-calendario">
-                <h4 class="mb-0">Calendario</h4>
-                <div class="grilla-calendario">
-                    <div class="dia-calendario">
-                        <small>DOM</small>
-                        <strong>7</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>LUN</small>
-                        <strong>8</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>MAR</small>
-                        <strong>9</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>MIE</small>
-                        <strong>10</strong>
-                    </div>
-                    <div class="dia-calendario active">
-                        <small>JUE</small>
-                        <strong>11</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>VIE</small>
-                        <strong>12</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>SAB</small>
-                        <strong>13</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>DOM</small>
-                        <strong>14</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>LUN</small>
-                        <strong>15</strong>
-                    </div>
-                    <div class="dia-calendario">
-                        <small>MAR</small>
-                        <strong>16</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LINEA DE TIEMPO -->
-            <div class="seccion-linea-tiempo">
-                <h4 class="mb-3">Línea de Tiempo</h4>
-                <div class="item-linea-tiempo">
-                    <div class="hora-linea-tiempo">10:00 am</div>
-                    <div class="punto-linea-tiempo bg-danger"></div>
-                    <div class="contenido-linea-tiempo">
-                        <strong>Consulta</strong>
-                        <div class="text-muted">Nombre p - Petunia</div>
-                    </div>
-                </div>
-                <div class="item-linea-tiempo">
-                    <div class="hora-linea-tiempo">10:30 am</div>
-                    <div class="punto-linea-tiempo bg-primary"></div>
-                    <div class="contenido-linea-tiempo">
-                        <strong>Laboratorio</strong>
-                        <div class="text-muted">Nombre paciente - Petunia</div>
-                    </div>
-                </div>
-                <div class="item-linea-tiempo">
-                    <div class="hora-linea-tiempo">11:00 am</div>
-                    <div class="punto-linea-tiempo bg-danger"></div>
-                    <div class="contenido-linea-tiempo">
-                        <strong>Consulta</strong>
-                        <div class="text-muted">Nombre paciente - Petunia</div>
-                    </div>
-                </div>
-                <div class="item-linea-tiempo">
-                    <div class="hora-linea-tiempo">11:30 am</div>
-                    <div class="punto-linea-tiempo bg-success"></div>
-                    <div class="contenido-linea-tiempo">
-                        <strong>Radiografía</strong>
-                        <div class="text-muted">Nombre paciente - Petunia</div>
-                    </div>
-                </div>
-                <div class="item-linea-tiempo">
-                    <div class="hora-linea-tiempo">12:00 pm</div>
-                    <div class="punto-linea-tiempo bg-danger"></div>
-                    <div class="contenido-linea-tiempo">
-                        <strong>Consulta</strong>
-                        <div class="text-muted">Nombre paciente - Petunia</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+    <!-- AL FINAL DEL BODY, ANTES DE CERRAR </body> -->
 
-    <!-- Bootstrap -->
+    <!-- 1. jQuery PRIMERO (obligatorio) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <!-- 2. Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- Propio -->
+    <!-- 3. DataTables JS (requiere jQuery) -->
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
 
+    <!-- 4. Tu script de dashboard primero -->
     <script src="../../assets/dashBoard/veterinarias/dashBoard.js"></script>
 
+    <!-- 5. Tu script de tabla AL FINAL -->
+    <script src="../../assets/dashBoard/veterinarias/tableCitas.js"></script>
 </body>
 
 </html>
