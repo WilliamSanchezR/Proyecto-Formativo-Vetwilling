@@ -80,6 +80,7 @@ function CrearTablaPacientes(listaPacientes) {
     }
 }
 
+// Función para mostrar el estado con íconos
 function MostrarEstado(estado) {
     switch (estado) {
         case "1":
@@ -91,9 +92,8 @@ function MostrarEstado(estado) {
     }
 }
 
-// ========================================
-// BOTÓN "ORDENAR"
-// ========================================
+
+// Botón "ordenar" - ordenar la tabla
 $('#btnOrdenar').on('click', function () {
     const opciones = [
         '📅 Fecha (más antigua primero)',
@@ -136,14 +136,15 @@ $('#btnOrdenar').on('click', function () {
     }
 });
 
-// ========================================
-// BOTÓN "EXPORT" - EXPORTAR A CSV
-// ========================================
+
+// Botón "exportar" - exportar a CSV la tabla 
 $('#btnExport').on('click', function () {
     console.log('📥 Exportando a CSV...');
     exportarACSV();
 });
 
+
+// Función para exportar la tabla a CSV
 function exportarACSV() {
     try {
         const data = tabla.rows({ search: 'applied' }).data();
@@ -179,6 +180,27 @@ function exportarACSV() {
         alert('Error al exportar CSV. Revisa la consola.');
     }
 }
+
+
+// Búsqueda en la tabla
+$('#buscarPaciente').on('keyup change', function () {
+    const valorBusqueda = this.value;
+    console.log('🔍 Buscando:', valorBusqueda);
+    tabla.search(valorBusqueda).draw();
+});
+
+
+// Limpiar búsqueda al hacer clic en el icono de búsqueda
+$('.campo-buscar i').on('click', function () {
+    $('#buscarPaciente').val('').trigger('keyup');
+});
+
+
+$('#btnAgregarNuevo').on('click', function () {
+    document.location.href = "registroPacientesLaboratorio.html";
+});
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch("../../assets/data/laboratorioPacientes.json")
