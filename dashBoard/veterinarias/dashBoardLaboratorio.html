@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard Laboratorio</title>
 
-   
-    
+
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -15,13 +15,16 @@
     <!-- Bootstrap Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
     <!-- Propio -->
     <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardLaboratorio.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
-     <!-- Global Styles -->
+    <!-- Global Styles -->
     <link rel="stylesheet" href="../../assets/extras/css/globalStyles.css">
 
 </head>
@@ -253,9 +256,33 @@
         <!-- ÁREA DE CONTENIDO LABORATORIO-->
         <div class="area-contenido">
 
+            <h2>Listado de Pacientes - Laboratorio Clinico</h2>
+
+            <!-- Controles de la Tabla -->
+            <div class="controles-tabla">
+                <div class="controles-izquierda">
+                    <div class="campo-buscar">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="buscarPaciente" placeholder="Buscar Pacientes...">
+                    </div>
+                </div>
+                <div class="controles-derecha">
+
+                    <button class="btn-control" id="btnOrdenar">
+                        <i class="bi bi-sort-down"></i> Ordenar
+                    </button>
+                    <button class="btn-control" id="btnExport">
+                        <i class="bi bi-download"></i> Export
+                    </button>
+                    <button class="btn-agregar" id="btnAgregarNuevo">
+                        <i class="bi bi-plus-lg"></i> Agregar Nuevo
+                    </button>
+                </div>
+            </div>
+
             <!-- TABLA DE LABORATORIO -->
             <div class="contenedor-tabla-laboratorio">
-                <table class="tabla-laboratorio">
+                <table class="tabla-laboratorio" id="tabla-pacientes">
                     <thead>
                         <tr>
                             <th></th>
@@ -276,30 +303,6 @@
                 </table>
 
 
-            </div>
-
-
-
-            <!-- PAGINACIÓN -->
-            <div class="paginacion-contenedor">
-                <div class="info-paginacion">
-                    Mostrando <strong>1-5</strong> de <strong>248</strong> Ítems
-                </div>
-                <nav>
-                    <ul class="pagination mb-0">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">50</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
 
         </div>
@@ -427,7 +430,11 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -435,7 +442,6 @@
         crossorigin="anonymous"></script>
 
     <!-- Propio -->
-    <script src="../../assets/dashBoard/veterinarias/dashBoard.js"></script>
     <script src="../../assets/dashBoard/veterinarias/dashBoardLaboratorios.js"></script>
 
 </body>

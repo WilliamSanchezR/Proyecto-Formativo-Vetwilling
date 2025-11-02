@@ -42,3 +42,93 @@ p{
     margin: 0px;
     padding: 0px;
 }
+
+
+
+/* ========================================
+   8. PERSONALIZACIÓN DE DATATABLES
+======================================== */
+
+/* Wrapper de DataTables */
+.dataTables_wrapper {
+    padding: 0;
+}
+
+/* Info de DataTables */
+.dataTables_wrapper .dataTables_info {
+    padding: 16px 0 0 0;
+    font-size: 14px;
+    color: var(--color-gris);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Paginación */
+.dataTables_wrapper .dataTables_paginate {
+    padding: 16px 0 0 0;
+    text-align: right;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 8px 14px !important;
+    margin: 0 4px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0 !important;
+    background-color: white !important;
+    color: var(--color-gris) !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: var(--light-color) !important;
+    border-color: var(--color-primario) !important;
+    color: var(--white-color) !important;
+    transform: translateY(-2px);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: var(--color-primario) !important;
+    color: white !important;
+    border-color: var(--color-primario) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+    background-color: white !important;
+    border-color: #e2e8f0 !important;
+    color: var(--color-gris) !important;
+    transform: none;
+}
+
+/* Ocultar controles de DataTables por defecto */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    display: none;
+}
+
+/* Móvil - Menos de 768px */
+@media (max-width: 768px) {
+    /* Paginación responsive */
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        margin: 0 2px !important;
+    }
+
+    .dataTables_wrapper .dataTables_info {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+        text-align: center;
+        margin-top: 12px;
+    }
+}
