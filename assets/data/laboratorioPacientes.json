@@ -7,7 +7,7 @@
     "animal": "Perro",
     "raza": "Labrador Retriever",
     "cantLaboratorios": 2,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F002",
@@ -17,7 +17,7 @@
     "animal": "Gato",
     "raza": "Persa",
     "cantLaboratorios": 1,
-    "estado": "Pendiente"
+    "estado": "1"
   },
   {
     "folio": "F003",
@@ -27,7 +27,7 @@
     "animal": "Perro",
     "raza": "Beagle",
     "cantLaboratorios": 3,
-    "estado": "En proceso"
+    "estado": "1"
   },
   {
     "folio": "F004",
@@ -37,7 +37,7 @@
     "animal": "Conejo",
     "raza": "Mini Lop",
     "cantLaboratorios": 1,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F005",
@@ -47,7 +47,7 @@
     "animal": "Perro",
     "raza": "Golden Retriever",
     "cantLaboratorios": 1,
-    "estado": "Cancelado"
+    "estado": "3"
   },
   {
     "folio": "F006",
@@ -57,7 +57,7 @@
     "animal": "Gato",
     "raza": "Bengala",
     "cantLaboratorios": 2,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F007",
@@ -67,7 +67,7 @@
     "animal": "Ave",
     "raza": "Cacatúa",
     "cantLaboratorios": 1,
-    "estado": "En proceso"
+    "estado": "1"
   },
   {
     "folio": "F008",
@@ -77,7 +77,7 @@
     "animal": "Perro",
     "raza": "Pastor Alemán",
     "cantLaboratorios": 2,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F009",
@@ -87,7 +87,7 @@
     "animal": "Ave",
     "raza": "Perico Australiano",
     "cantLaboratorios": 1,
-    "estado": "Pendiente"
+    "estado": "1"
   },
   {
     "folio": "F010",
@@ -97,7 +97,7 @@
     "animal": "Reptil",
     "raza": "Iguana Verde",
     "cantLaboratorios": 1,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F011",
@@ -107,7 +107,7 @@
     "animal": "Perro",
     "raza": "Pomerania",
     "cantLaboratorios": 2,
-    "estado": "Cancelado"
+    "estado": "3"
   },
   {
     "folio": "F012",
@@ -117,7 +117,7 @@
     "animal": "Gato",
     "raza": "Sphynx",
     "cantLaboratorios": 2,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F013",
@@ -127,7 +127,7 @@
     "animal": "Conejo",
     "raza": "Rex",
     "cantLaboratorios": 1,
-    "estado": "En proceso"
+    "estado": "1"
   },
   {
     "folio": "F014",
@@ -137,7 +137,7 @@
     "animal": "Perro",
     "raza": "Jack Russell Terrier",
     "cantLaboratorios": 1,
-    "estado": "Pendiente"
+    "estado": "1"
   },
   {
     "folio": "F015",
@@ -147,7 +147,7 @@
     "animal": "Gato",
     "raza": "Siamés",
     "cantLaboratorios": 2,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F016",
@@ -157,7 +157,7 @@
     "animal": "Perro",
     "raza": "Boxer",
     "cantLaboratorios": 3,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F017",
@@ -167,7 +167,7 @@
     "animal": "Conejo",
     "raza": "Cabeza de León",
     "cantLaboratorios": 2,
-    "estado": "Pendiente"
+    "estado": "1"
   },
   {
     "folio": "F018",
@@ -177,7 +177,7 @@
     "animal": "Perro",
     "raza": "Doberman",
     "cantLaboratorios": 3,
-    "estado": "Completado"
+    "estado": "2"
   },
   {
     "folio": "F019",
@@ -187,7 +187,7 @@
     "animal": "Reptil",
     "raza": "Gecko Leopardo",
     "cantLaboratorios": 1,
-    "estado": "En proceso"
+    "estado": "1"
   },
   {
     "folio": "F020",
@@ -197,6 +197,6 @@
     "animal": "Ave",
     "raza": "Canario",
     "cantLaboratorios": 1,
-    "estado": "Completado"
+    "estado": "2"
   }
 ]

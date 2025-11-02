@@ -1,3 +1,119 @@
+.area-contenido h2{
+    margin-bottom: 10px;
+    color: var(--neutral-color);
+}
+
+/* ========================================
+   CONTROLES DE LA TABLA
+======================================== */
+.controles-tabla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.controles-izquierda,
+.controles-derecha {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Campo de búsqueda */
+.campo-buscar {
+    position: relative;
+    width: 280px;
+}
+
+.campo-buscar i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gris);
+    font-size: 16px;
+}
+
+.campo-buscar input {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.campo-buscar input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(10, 147, 44, 0.1);
+}
+
+/* Botones de control */
+.btn-control {
+    padding: 10px 16px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: var(--color-gris);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-control:hover {
+    background-color: #f8fafc;
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-control i {
+    font-size: 16px;
+}
+
+/* Botón agregar nuevo */
+.btn-agregar {
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #087523;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(10, 147, 44, 0.3);
+}
+
+.btn-agregar i {
+    font-size: 16px;
+}
+
+
+
 /* Tabla de laboratorio */
 .contenedor-tabla-laboratorio {
     background: white;
@@ -14,7 +130,7 @@
 }
 
 .tabla-laboratorio thead {
-    background: #f8fcf8;
+    background: var(--color-verde);
 }
 
 .tabla-laboratorio th {
@@ -26,11 +142,45 @@
     border-bottom: 2px solid #e2e8f0;
 }
 
+.tabla-laboratorio tbody tr {
+    border-bottom: 1px solid #e0e2e4;
+}
+
 .tabla-laboratorio td {
     padding: 16px;
-    border-bottom: 1px solid #f1f5f9;
     font-size: var(--fs-titulo4);
     color: var(--color-gris);
+}
+
+.td-status {
+    text-align: center;
+}
+
+.completado-status {
+    color: var(--color-primario);
+    font-size: 18px;
+}
+
+.pendiente-status {
+    color: var(--light-color);
+    font-size: 18px;
+}
+
+.cancelado-status {
+    color: #a53e3b;
+    font-size: 18px;
+}
+
+.td-search-icon {
+    cursor: pointer;    
+}
+
+.td-search-icon i {
+    font-size: 18px;
+}
+
+.td-search-icon i:hover {
+    color: #0c20ce;
 }
 
 .tabla-laboratorio tbody tr {
@@ -38,7 +188,7 @@
 }
 
 .tabla-laboratorio tbody tr:hover {
-    background: #f8fafc;
+    background: var(--color-hover);
 }
 
 .info-laboratorio {
