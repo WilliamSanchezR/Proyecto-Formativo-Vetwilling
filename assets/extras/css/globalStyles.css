@@ -15,6 +15,7 @@
     --green-background: #9DE795; /* Ideal para fondos, detalles secundarios y refuerzos visuales.*/
     --neutral-color: #424B54; /* Color neutro, utilizado en tipografías y elementos secundarios.*/
     --light-color: #93BEDF; /* Se recomienda para destacar elementos sin perder armonía.*/
+    --color-hover: #d7d8da; /* Color para efectos hover y estados activos.*/
 }
 
 /* 3. Botones */

@@ -14,7 +14,7 @@
 }
 
 .tabla-laboratorio thead {
-    background: #f8fcf8;
+    background: var(--color-verde);
 }
 
 .tabla-laboratorio th {
@@ -26,11 +26,45 @@
     border-bottom: 2px solid #e2e8f0;
 }
 
+.tabla-laboratorio tbody tr {
+    border-bottom: 1px solid #e0e2e4;
+}
+
 .tabla-laboratorio td {
     padding: 16px;
-    border-bottom: 1px solid #f1f5f9;
     font-size: var(--fs-titulo4);
     color: var(--color-gris);
+}
+
+.td-status {
+    text-align: center;
+}
+
+.completado-status {
+    color: var(--color-primario);
+    font-size: 18px;
+}
+
+.pendiente-status {
+    color: var(--light-color);
+    font-size: 18px;
+}
+
+.cancelado-status {
+    color: #a53e3b;
+    font-size: 18px;
+}
+
+.td-search-icon {
+    cursor: pointer;    
+}
+
+.td-search-icon i {
+    font-size: 18px;
+}
+
+.td-search-icon i:hover {
+    color: #0c20ce;
 }
 
 .tabla-laboratorio tbody tr {
@@ -38,7 +72,7 @@
 }
 
 .tabla-laboratorio tbody tr:hover {
-    background: #f8fafc;
+    background: var(--color-hover);
 }
 
 .info-laboratorio {

@@ -8,13 +8,9 @@ function CrearTablaPacientes(listaPacientes) {
     listaPacientes.forEach(paciente => {
         const fila = document.createElement("tr");
 
-        /// data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
-        fila.setAttribute("data-bs-toggle", "modal");
-        fila.setAttribute("data-bs-target", "#exampleModal");
-        fila.setAttribute("data-bs-whatever", "@mdo");
 
         fila.innerHTML = `
-            <td><i class="bi bi-search"></i></td>
+            <td class="td-search-icon" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="bi bi-search"></i></td>
             <td>${paciente.folio}</td>
             <td>${paciente.fecha}</td>
             <td>${paciente.propietario}</td>
@@ -22,11 +18,22 @@ function CrearTablaPacientes(listaPacientes) {
             <td>${paciente.animal}</td>
             <td>${paciente.raza}</td>
             <td>${paciente.cantLaboratorios}</td>
-            <td>${paciente.estado}</td>
+            <td class="td-status">${MostrarEstado(paciente.estado)}</td>
         `;
         // Se agrega la fila al cuerpo de la tabla.
         tablaBody.appendChild(fila);
     });
+}
+
+function MostrarEstado(estado) {
+    switch (estado) {
+        case "1":
+            return `<i class="bi bi-clock-history pendiente-status"></i>`;
+        case "2":
+            return `<i class="bi bi-check-circle-fill completado-status"></i>`;
+        default:
+            return `<i class="bi bi-x-circle-fill cancelado-status"></i>`;
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
