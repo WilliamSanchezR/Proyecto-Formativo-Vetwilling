@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleTableCitas.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/nodoNoche.css">
+
 </head>
 
 <body>
@@ -232,8 +234,8 @@
                 <input type="text" placeholder="Search" class="form-control">
             </div>
             <div class="acciones-navegacion">
-                <button class="boton-icono-navegacion">
-                    <i class="bi bi-brightness-high"></i>
+                <button class="boton-icono-navegacion" onclick="toggleTheme()">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
                 </button>
                 <button class="boton-icono-navegacion">
                     <i class="bi bi-arrow-counterclockwise"></i>
@@ -268,6 +270,9 @@
 
     <!-- 5. Tu script de tabla AL FINAL -->
     <script src="../../assets/dashBoard/veterinarias/tableCitas.js"></script>
+
+    <script src="../../assets/dashBoard/veterinarias/theme-switcher.js"></script>
+
 </body>
 
 </html>

@@ -78,15 +78,15 @@
 /* BODY Y BASE */
 body {
     background-color: var(--bg-body);
-    color: var(--text-primary);
+    color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--bg-body);
+    color: #fff;
 }
 
 p, span, label {
-    color: var(--text-primary);
+    color: #fff;
 }
 
 
@@ -98,7 +98,7 @@ p, span, label {
 }
 
 .navegacion-izquierda {
-    color: var(--text-primary);
+    color: #ffffff !important;
 }
 
 .buscador-navegacion input {
@@ -153,7 +153,12 @@ p, span, label {
 .wizard-container,
 .code-box,
 .barra-acciones-pacientes,
-.paginacion-contenedor {
+.paginacion-contenedor,
+.item-linea-tiempo ,
+.contenedor-tabla,
+.item-estadistica-especie,
+.tarjeta-tabla-financiera,
+.tabla-financiera .fila-total{
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 8px var(--shadow-sm);
@@ -187,7 +192,8 @@ p, span, label {
 }
 
 /* LÍNEA DE TIEMPO */
-.hora-linea-tiempo {
+.hora-linea-tiempo,
+.contenido-linea-tiempo .text-muted {
     color: var(--text-secondary);
 }
 
@@ -432,4 +438,8 @@ hr {
 .border-top,
 .border-bottom {
     border-color: var(--border-color) !important;
+}
+
+.texto-item-sidebar{
+    color: #fff !important;
 }
