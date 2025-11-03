@@ -15,16 +15,16 @@
     <!-- DataTables CSS -->
     <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
 
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
 
     <!-- Tus CSS -->
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
-    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleTableCitas.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/recetaStyle.css">
 </head>
 
 <body>
+
     <!-- BARRA LATERAL IZQUIERDA -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
         <div class="marca-sidebar">
@@ -85,7 +85,6 @@
         </button>
     </div>
 
-    <!-- PANEL DERECHO -->
     <div class="barra-lateral-derecha oculta" id="barraLateralDerecha">
         <div class="encabezado-lateral-derecho">
             <h5 class="mb-0">Panel Lateral</h5>
@@ -217,6 +216,7 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="contenido-principal" id="contenidoPrincipal">
+
         <!-- NAVBAR SUPERIOR -->
         <div class="barra-navegacion-superior">
             <div class="navegacion-izquierda">
@@ -247,10 +247,38 @@
             </div>
         </div>
 
-        <!-- ÁREA DE CONTENIDO -->
+        <!-- CONTENIDO DASHBOARD RECETAS -->
+        <div class="cont-receta">
+            <div>
+                <h2>Recetas</h2>
+            </div>
+            <div class="campo-buscar">
+                <i class="bi bi-search"></i>
+                <input type="text" id="buscarExamenes" placeholder="Buscar paciente por documento" autocomplete="off">
+                <ul class="lista-sugerencias autocomplete-items" id="listaSugerencias"></ul>
+            </div>
+            <div>
+                <div class="info-paciente">
+                    <span>Fecha: </span>
+                    <span>Propietario: </span>
+                    <span>Nombre Paciente: </span>
+                    <span>Tipo de Animal: </span>
+                    <span>Raza: </span>
+                    <span>Sexo: </span>
+                </div>
+                
+                    <textarea name="" id="descripcion-receta">RP/ </textarea>
+
+                <div class="cont-btn-guardar">
+                    <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
+                </div>
+
+            </div>
+        </div>
 
     </div>
-    <!-- AL FINAL DEL BODY, ANTES DE CERRAR </body> -->
+
+
 
     <!-- 1. jQuery PRIMERO (obligatorio) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -260,14 +288,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- 3. DataTables JS (requiere jQuery) -->
-    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+  
 
-    <!-- 4. Tu script de dashboard primero -->
-    <script src="../../assets/dashBoard/veterinarias/dashBoard.js"></script>
-
-    <!-- 5. Tu script de tabla AL FINAL -->
-    <script src="../../assets/dashBoard/veterinarias/tableCitas.js"></script>
 </body>
 
 </html>
