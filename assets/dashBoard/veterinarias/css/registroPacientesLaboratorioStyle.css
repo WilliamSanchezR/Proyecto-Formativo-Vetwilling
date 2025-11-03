@@ -69,6 +69,8 @@
     color: var(--color-gris);
 }
 
+/* Autocompletar */
+
 .autocomplete-items {
     display: none;
     position: absolute;

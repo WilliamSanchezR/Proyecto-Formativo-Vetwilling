@@ -254,23 +254,18 @@
             </div>
             <div class="campo-buscar">
                 <i class="bi bi-search"></i>
-                <input type="text" id="buscarExamenes" placeholder="Buscar paciente por documento" autocomplete="off">
+                <input type="text" id="buscarPacientes" placeholder="Buscar paciente por documento" autocomplete="off">
                 <ul class="lista-sugerencias autocomplete-items" id="listaSugerencias"></ul>
             </div>
-            <div>
-                <div class="info-paciente">
-                    <span>Fecha: </span>
-                    <span>Propietario: </span>
-                    <span>Nombre Paciente: </span>
-                    <span>Tipo de Animal: </span>
-                    <span>Raza: </span>
-                    <span>Sexo: </span>
+            <div class="cont-form">
+                <div id="plaque-paciente" class="info-paciente">
+
                 </div>
-                
-                    <textarea name="" id="descripcion-receta">RP/ </textarea>
+
+                <textarea name="" id="descripcion-receta">RP/ </textarea>
 
                 <div class="cont-btn-guardar">
-                    <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
+                    <button id="btn-guardar-receta" type="button" class="btn btn-primary btn-guardar">Guardar</button>
                 </div>
 
             </div>
@@ -278,6 +273,66 @@
 
     </div>
 
+
+    <!-- Modal Vista Previa -->
+    <div class="modal modal-xl" id="vistaImprimir" role="dialog" tabindex="-1" aria-labelledby="vistaImprimirLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="vistaImprimirLabel">Receta - Vitas previa Imprimir</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="cont-imprimir">
+                        <div class="modal-fondo">
+                            <img src="../../assets/extras/img/fondo-marca.png" />
+                        </div>
+
+                        <div class="cont-header">
+                            <div class="logo">
+                                <img src="../../assets/extras/img/LOGO-POSITIVO 1.png" alt="">
+                            </div>
+                            <div class="info-medico">
+                                <span>DR. Chapatin Pepito Perez</span>
+                                <span>Médico Veterinario</span>
+                                <span>Rut: 111100111</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div id="plaque-paciente-modal" class="info-paciente"></div>
+                            <div class="cont-receta-preview">
+                                <p id="receta-paciente"></p>
+                            </div>
+                        </div>
+
+                        <div class="footer_preview">
+                            <div class="footer-fecha">
+                                <span id="fecha_report"></span>
+                                <div class="pie-firma"><span>Fecha Entrega</span></div>
+                            </div>
+                            <div></div>
+                            <div class="firma">
+                                <img src="" alt="">
+                                <div class="pie-firma"><span>Firma y sello</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btn-guardar-resultados" type="button" class="btn btn-primary btn-guardar"><i
+                                class="bi bi-printer"></i> Imprimir</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 
     <!-- 1. jQuery PRIMERO (obligatorio) -->
@@ -288,7 +343,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-  
+    <!-- Script personalizado -->
+    <script src="../../assets/dashBoard/veterinarias/js/dashBoardRecetas.js"></script>
 
 </body>
 
