@@ -1,4 +1,6 @@
 let tabla;
+let tablaLaboratoriosCargados;
+let tableResultadosLab;
 
 //Se crea la funcion para crear la tabla de pacientes con laboratorio.
 function CrearTablaPacientes(listaPacientes) {
@@ -200,6 +202,126 @@ $('#btnAgregarNuevo').on('click', function () {
     document.location.href = "registroPacientesLaboratorio.html";
 });
 
+// Cerrar modal de resultados de laboratorio al guardar
+$('#btn-guardar-resultados').on('click', function () {
+    $('#modalResultadoLab').modal('hide');
+});
+
+
+// Funcion para inicializar DataTable para la lista de laboratorios asociados
+function dataTableListLaboratorios() {
+    try {
+        tablaLaboratoriosCargados = $('#list-laboratorios-asociados').DataTable({
+            // Configuración de idioma en español
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay Laboratorios disponibles",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Laboratorios",
+                "infoEmpty": "Mostrando 0 a 0 de 0 Laboratorios",
+                "infoFiltered": "(filtrado de _MAX_ Laboratorios totales)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Laboratorios",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron Laboratorios",
+                "paginate": {
+                    "first": "Primera",
+                    "last": "Última",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+
+            // Configuración de paginación
+            pageLength: 9,
+            lengthMenu: [[9, 15, 25, 50, -1], [9, 15, 25, 50, "Todas"]],
+
+            // Configuración de ordenamiento
+            order: [[2, 'desc']], // Ordenar por fecha por defecto
+
+            // Configuración de columnas
+            columnDefs: [
+                {
+                    targets: -1, // Última columna (Operación)
+                    orderable: false,
+                    searchable: false
+                }
+            ],
+
+            // DOM personalizado
+            dom: '<"row"<"col-sm-12"tr>>' +
+                '<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7"p>>',
+
+        });
+
+        console.log('✅ Tabla inicializada exitosamente');
+
+    } catch (error) {
+        console.error('❌ Error al inicializar DataTables:', error);
+        alert('Error al inicializar la tabla. Revisa la consola para más detalles.');
+        return;
+    }
+}
+
+// Funcion para inicializar DataTable para la lista de resultados de laboratorio
+function dataTableResultadosLaboratorio() {
+    try {
+        tableResultadosLab = $('#lista-resultados').DataTable({
+            // Configuración de idioma en español
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay Laboratorios disponibles",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Laboratorios",
+                "infoEmpty": "Mostrando 0 a 0 de 0 Laboratorios",
+                "infoFiltered": "(filtrado de _MAX_ Laboratorios totales)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Laboratorios",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron Laboratorios",
+                "paginate": {
+                    "first": "Primera",
+                    "last": "Última",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+
+            // Configuración de paginación
+            pageLength: 9,
+            lengthMenu: [[9, 15, 25, 50, -1], [9, 15, 25, 50, "Todas"]],
+
+            // Configuración de ordenamiento
+            order: [[2, 'desc']], // Ordenar por fecha por defecto
+
+            // Configuración de columnas
+            columnDefs: [
+                {
+                    targets: -1, // Última columna (Operación)
+                    orderable: false,
+                    searchable: false
+                }
+            ],
+
+            // DOM personalizado
+            dom: '<"row"<"col-sm-12"tr>>' +
+                '<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7"p>>',
+
+        });
+
+        console.log('✅ Tabla inicializada exitosamente');
+
+    } catch (error) {
+        console.error('❌ Error al inicializar DataTables:', error);
+        alert('Error al inicializar la tabla. Revisa la consola para más detalles.');
+        return;
+    }
+}
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -212,4 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error al cargar el JSON:", error);
 
         });
+
+    dataTableListLaboratorios();
+    dataTableResultadosLaboratorio();
 })
