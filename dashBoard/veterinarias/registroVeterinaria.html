@@ -4,32 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard Veterinario - Recetas</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- DataTables CSS -->
+    <title>DashBoard Registro de Veterinarias</title>
+    <!-- Icono de la página -->
     <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Tus CSS -->
+    <!-- Bootstrap Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- SweetAlert2 - AGREGAR ANTES DE TUS SCRIPTS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- Propio -->
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/formulario.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/nodoNoche.css">
 
-=======
-    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/recetaStyle.css">
->>>>>>> a72f0b61a0a846477e6b7e1bba99655ddc80a6b9
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../../assets/extras/css/globalStyles.css">
 </head>
 
 <body>
-
     <!-- BARRA LATERAL IZQUIERDA -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
         <div class="marca-sidebar">
@@ -37,7 +36,6 @@
                 <img src="../../assets/dashBoard/veterinarias/img/LOGO-VERTICAL-POSITIVA-DASHBOARD.png" alt="logo"
                     class="logoDas logo-icono-sidebar" width="40"></span>
         </div>
-
 
         <div class="menu-sidebar">
             <div class="seccion-sidebar">Menu</div>
@@ -75,7 +73,7 @@
                 <i class="bi bi-file-earmark-text"></i>
                 <span class="texto-item-sidebar">Reportes</span>
             </a>
-            <a href="../veterinarias/dashBoardRecetas.html" class="item-sidebar active">
+            <a href="../veterinarias/dashBoardRecetas.html" class="item-sidebar">
                 <i class="bi bi-receipt"></i>
                 <span class="texto-item-sidebar">Recetas</span>
             </a>
@@ -90,6 +88,7 @@
         </button>
     </div>
 
+    <!-- PANEL DERECHO -->
     <div class="barra-lateral-derecha oculta" id="barraLateralDerecha">
         <div class="encabezado-lateral-derecho">
             <h5 class="mb-0">Panel Lateral</h5>
@@ -105,7 +104,7 @@
                     <i class="bi bi-bug"></i>
                 </div>
                 <div>
-                    <div class="fw-semibold">Pacientes con pulgas</div>
+                    <div class="fw-semibold">laboratorios con pulgas</div>
                     <small class="text-muted">Ahora</small>
                 </div>
             </div>
@@ -123,7 +122,7 @@
                     <i class="bi bi-bug-fill"></i>
                 </div>
                 <div>
-                    <div class="fw-semibold">Paciente con parasitos</div>
+                    <div class="fw-semibold">laboratorio con parasitos</div>
                     <small class="text-muted">Hace 12 h</small>
                 </div>
             </div>
@@ -179,39 +178,39 @@
         </div>
 
         <div class="p-3 border-top">
-            <h6 class="mb-3 fw-bold">Dueños pacientes</h6>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=1" alt="Paciente" class="avatar-paciente">
+            <h6 class="mb-3 fw-bold">Dueños laboratorios</h6>
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=1" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Natali Craig</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=2" alt="Paciente" class="avatar-paciente">
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=2" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Drew Cano</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=3" alt="Paciente" class="avatar-paciente">
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=3" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Andi Lane</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=4" alt="Paciente" class="avatar-paciente">
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=4" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Koray Okumus</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=5" alt="Paciente" class="avatar-paciente">
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=5" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Kate Morrison</div>
                 </div>
             </div>
-            <div class="item-paciente">
-                <img src="https://i.pravatar.cc/150?img=6" alt="Paciente" class="avatar-paciente">
+            <div class="item-laboratorio">
+                <img src="https://i.pravatar.cc/150?img=6" alt="laboratorio" class="avatar-laboratorio">
                 <div class="flex-grow-1">
                     <div class="fw-semibold">Melody Macy</div>
                 </div>
@@ -226,10 +225,10 @@
         <div class="barra-navegacion-superior">
             <div class="navegacion-izquierda">
                 <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-star text-warning"></i>
-                    <span class="fw-semibold">Recetas</span>
+                    <i class="bi bi-building-check"></i>
+                    <span class="fw-semibold">Veterinaria</span>
                     <span class="text-muted">/</span>
-                    <span>Por defecto</span>
+                    <span>Registro</span>
                 </div>
             </div>
             <div class="buscador-navegacion">
@@ -237,8 +236,8 @@
                 <input type="text" placeholder="Search" class="form-control">
             </div>
             <div class="acciones-navegacion">
-                <button class="boton-icono-navegacion" onclick="toggleTheme()">
-                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                <button class="boton-icono-navegacion">
+                    <i class="bi bi-brightness-high"></i>
                 </button>
                 <button class="boton-icono-navegacion">
                     <i class="bi bi-arrow-counterclockwise"></i>
@@ -252,116 +251,86 @@
             </div>
         </div>
 
-        <!-- CONTENIDO DASHBOARD RECETAS -->
-        <div class="cont-receta">
-            <div>
-                <h2>Recetas</h2>
+        <div class="wizard-container">
+            <div class="wizard-header">
+                <i class="bi bi-building-check"></i>
+                <h2>Registro de la Veterinaria</h2>
+                <p class="text-muted">Complete todos los campos requeridos para registrar la veterinaria</p>
             </div>
-            <div class="campo-buscar">
-                <i class="bi bi-search"></i>
-                <input type="text" id="buscarPacientes" placeholder="Buscar paciente por documento" autocomplete="off">
-                <ul class="lista-sugerencias autocomplete-items" id="listaSugerencias"></ul>
-            </div>
-            <div class="cont-form">
-                <div id="plaque-paciente" class="info-paciente">
-
-                </div>
-
-                <textarea name="" id="descripcion-receta">RP/ </textarea>
-
-                <div class="cont-btn-guardar">
-                    <button id="btn-guardar-receta" type="button" class="btn btn-primary btn-guardar">Guardar</button>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
 
 
-    <!-- Modal Vista Previa -->
-    <div class="modal modal-xl" id="vistaImprimir" role="dialog" tabindex="-1" aria-labelledby="vistaImprimirLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="vistaImprimirLabel">Receta - Vitas previa Imprimir</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <form id="vetForm">
 
-                <div class="modal-body">
-                    <div id="cont-imprimir">
-                        <div class="modal-fondo">
-                            <img src="../../assets/extras/img/fondo-marca.png" />
+                <!-- Paso 1: Datos del Propietario -->
+                <div class="step active">
+                    <h3><i class="bi bi-motherboard"></i>Datos de la Veterinaria</h3>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label><i class="bi bi-hash"></i> Nit / Rut *</label>
+                                    <input type="number" id="documento" required placeholder="12345678">
+                                </div>
+                            </div>
+
                         </div>
-
-                        <div class="cont-header">
-                            <div class="logo">
-                                <img src="../../assets/extras/img/LOGO-POSITIVO 1.png" alt="">
-                            </div>
-                            <div class="info-medico">
-                                <span>DR. Chapatin Pepito Perez</span>
-                                <span>Médico Veterinario</span>
-                                <span>Rut: 111100111</span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div id="plaque-paciente-modal" class="info-paciente"></div>
-                            <div class="cont-receta-preview">
-                                <p id="receta-paciente"></p>
-                            </div>
-                        </div>
-
-                        <div class="footer_preview">
-                            <div class="footer-fecha">
-                                <span id="fecha_report"></span>
-                                <div class="pie-firma"><span>Fecha Entrega</span></div>
-                            </div>
-                            <div></div>
-                            <div class="firma">
-                                <img src="" alt="">
-                                <div class="pie-firma"><span>Firma y sello</span></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><i class="bi bi-person"></i> Nombre *</label>
+                                <input type="text" id="nombrePropietario" required placeholder="Ej: Juan Pérez García">
                             </div>
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><i class="bi bi-geo-alt"></i> Dirección *</label>
+                                <input type="text" id="direccion" required placeholder="Calle 12 # 34-56, Apto 102">
+                            </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button id="btn-guardar-resultados" type="button" class="btn btn-primary btn-guardar"><i
-                                class="bi bi-printer"></i> Imprimir</button>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><i class="bi bi-telephone"></i> Teléfono *</label>
+                                <input type="tel" id="telefono" required placeholder="+57 300 123 4567">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><i class="bi bi-envelope"></i> Correo electrónico *</label>
+                                <input type="email" id="correo" required placeholder="ejemplo@correo.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <span></span>
+                        <button type="submit" class="btn btn-success" id="btnGuardarVeterinaria">
+                            Guardar <i class="bi bi-floppy"></i>
+                        </button>
                     </div>
                 </div>
-
-
-            </div>
+            </form>
         </div>
-    </div>
 
-
-    <!-- 1. jQuery PRIMERO (obligatorio) -->
+         <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- 2. Bootstrap JS -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- Script personalizado -->
-    <script src="../../assets/dashBoard/veterinarias/js/dashBoardRecetas.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<<<<<<< HEAD
-    <!-- 4. Tu script de dashboard primero -->
-    <script src="../../assets/dashBoard/veterinarias/dashBoard.js"></script>
+    <!-- JS Propio -->
+     <script src="../../assets/dashBoard/veterinarias/js/registroVeterinaria.js"></script>
 
-    <!-- 5. Tu script de tabla AL FINAL -->
-    <script src="../../assets/dashBoard/veterinarias/tableCitas.js"></script>
-
-    <script src="../../assets/dashBoard/veterinarias/theme-switcher.js"></script>
-
-=======
->>>>>>> a72f0b61a0a846477e6b7e1bba99655ddc80a6b9
 </body>
 
 </html>
