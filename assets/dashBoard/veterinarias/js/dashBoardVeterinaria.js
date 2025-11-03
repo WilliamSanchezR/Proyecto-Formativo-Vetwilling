@@ -83,6 +83,7 @@ function crearTablaVerinaria(listaVet) {
 
 }
 
+
 function consultaListaLaboratorios() {
     fetch("../../assets/data/veterinarias.json")
         .then(response => response.json())
