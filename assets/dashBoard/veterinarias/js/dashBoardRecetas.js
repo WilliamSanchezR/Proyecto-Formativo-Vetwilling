@@ -1,3 +1,4 @@
+// Variables globales
 let listaPacientes = [];
 let pacientesSeleccionado = null;
 const buscarPaciente = document.getElementById("buscarPacientes");
@@ -6,7 +7,9 @@ const contPlaques = document.getElementById("plaque-paciente");
 const textReceta = document.getElementById("descripcion-receta");
 const plaquePacienteModal = document.getElementById("plaque-paciente-modal");
 
+// Funcion para llamar al json de pacientes
 function consultarPacientes() {
+
     fetch('../../../assets/data/pacientes.json')
         .then(response => response.json())
         .then(data => {
@@ -17,6 +20,7 @@ function consultarPacientes() {
         });
 }
 
+// Funcion para cargar los datos del ppropetasrio y los de la mascota
 function crearPlaquePaciente(paciente) {
     return `
             <div>
@@ -35,6 +39,7 @@ function crearPlaquePaciente(paciente) {
     `;
 }
 
+// Funcion para mostrar el formulario del paciente seleccionado
 function mostrarContForm() {
     contPlaques.innerHTML = '';
     const contForm = document.querySelector('.cont-form');
@@ -43,6 +48,7 @@ function mostrarContForm() {
     textReceta.value = 'RP/\n\n';
 }
 
+// Funcion para buscar el paciente por nuero de documento del propietario
 function buscarPacientes(valorInput) {
     listaSugerencias.innerHTML = '';
 
@@ -78,13 +84,13 @@ function buscarPacientes(valorInput) {
     });
 }
 
-// Evento del input de búsqueda de exámenes
+// Evento del input de búsqueda de pacientes
 buscarPaciente.addEventListener("input", (e) => {
     const valorInput = e.target.value;
     buscarPacientes(valorInput);
 });
 
-// Cerrar modal de resultados de laboratorio al guardar
+// Guardar receta y mostrar previsualizacion de la misma
 $('#btn-guardar-receta').on('click', function () {
     $('#vistaImprimir').modal('show');
     plaquePacienteModal.innerHTML = crearPlaquePaciente(pacientesSeleccionado);
@@ -96,24 +102,26 @@ $('#btn-guardar-receta').on('click', function () {
     document.getElementById("fecha_report").innerText = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
 });
 
+// Funcion para imprimer la receta medica
 function imprimirDiv(idDiv) {
-  // 1. Guarda el contenido actual del body
+  // Guarda el contenido actual del body
   var contenidoOriginal = document.body.innerHTML;
   document.title = 'Veterinario - Recetas';
-  // 2. Obtiene el div que se va a imprimir
+  // Obtiene el div que se va a imprimir
   var divParaImprimir = document.getElementById(idDiv).innerHTML;
   divParaImprimir
 
-  // 3. Reemplaza el contenido del body con el del div
+  // Reemplaza el contenido del body con el del div
   document.body.innerHTML = divParaImprimir;
   // 4. Abre el diálogo de impresión
   window.print();
-  // 5. Restaura el contenido original del body
+  // Restaura el contenido original del body
   document.body.innerHTML = contenidoOriginal;
   // Recarga la página para volver a la vista original
   window.location.reload();
 }
 
+// Boton de imprimir
 $('#btn-guardar-resultados').on('click', function() {
     imprimirDiv('cont-imprimir');
 });
