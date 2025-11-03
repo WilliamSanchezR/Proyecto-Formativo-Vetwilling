@@ -292,6 +292,38 @@
     cursor: not-allowed;
 }
 
+.info-paciente{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 18px;
+    box-shadow:
+    inset 0 -3em 3em #8582821a,
+    0 0 0 2px #ffffff,
+    0.3em 0.3em 1em #0000002d;
+}
+
+.info-paciente span{
+    font-size: 14px;
+}
+
+.list-examenes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-guardar{
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.btn-guardar:hover{
+    background-color: #087523 !important;
+    color: white;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 

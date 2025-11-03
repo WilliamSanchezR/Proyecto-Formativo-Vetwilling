@@ -22,7 +22,7 @@
     <link rel="icon" href="../../assets/webSite/img/FAVICON.png" type="image">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPerfil.css">
-    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardLaboratorio.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/styleDashBoardLaboratorio.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/styleDashBoardPacientes.css">
     <!-- Global Styles -->
     <link rel="stylesheet" href="../../assets/extras/css/globalStyles.css">
@@ -315,7 +315,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div>
+                    <div class="info-paciente">
                         <span>Fecha: </span>
                         <span>Propietario: </span>
                         <span>Nombre Paciente: </span>
@@ -325,9 +325,10 @@
                     </div>
 
                     <div>
-                        <table class="tabla-laboratorio">
+                        <table class="tabla-laboratorio" id="list-laboratorios-asociados">
                             <thead>
                                 <tr>
+                                    <th></th>
                                     <th>Tipo de Laboratorio</th>
                                     <th>Estado</th>
                                     <th>Fecha</th>
@@ -336,13 +337,17 @@
 
                             <tbody id="tablaResultados">
                                 <!-- Laboratorio 1 -->
-                                <tr data-bs-toggle="modal" data-bs-target="#modalResultadoLab" data-bs-whatever="@mdo">
+                                <tr>
+                                    <td data-bs-toggle="modal" data-bs-target="#modalResultadoLab"
+                                        data-bs-whatever="@mdo"><i class="bi bi-search"></i></td>
                                     <td>Glucosa</td>
                                     <td>Completado</td>
                                     <td>2024-08-15</td>
                                 </tr>
                                 <!-- Laboratorio 2 -->
                                 <tr>
+                                    <td data-bs-toggle="modal" data-bs-target="#modalResultadoLab"
+                                        data-bs-whatever="@mdo"><i class="bi bi-search"></i></td>
                                     <td>Urea</td>
                                     <td>Pendiente</td>
                                     <td>2024-08-16</td>
@@ -365,12 +370,12 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalResultadoLabLabel">Laboratorios Clinicos</h1>
+                    <h1 class="modal-title fs-5" id="modalResultadoLabLabel">Resultado de Laboratorios Clinicos</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
-                    <div>
+                    <div class="info-paciente">
                         <span>Fecha: </span>
                         <span>Propietario: </span>
                         <span>Nombre Paciente: </span>
@@ -379,9 +384,9 @@
                         <span>Sexo: </span>
                     </div>
 
-                    <div>
-                        <span>Laboratorio: </span>
-                        <table class="tabla-laboratorio">
+                    <div class="list-examenes">
+                        <span>Laboratorios: </span>
+                        <table class="tabla-laboratorio" id="lista-resultados">
                             <thead>
                                 <tr>
                                     <th>Tipo de Prueba</th>
@@ -417,7 +422,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Editar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
+                            <button id="btn-guardar-resultados" type="button" class="btn btn-primary btn-guardar">Guardar</button>
                         </div>
                     </div>
 
@@ -440,7 +445,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Propio -->
-    <script src="../../assets/dashBoard/veterinarias/dashBoardLaboratorios.js"></script>
+    <script src="../../assets/dashBoard/veterinarias/js/dashBoardLaboratorios.js"></script>
 
 </body>
 
