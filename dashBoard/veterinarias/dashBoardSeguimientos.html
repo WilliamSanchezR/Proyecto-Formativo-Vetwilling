@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/styleDashBoard.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/styleDashBoardPerfil.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/styleDashBoardPacientes.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/styleDashBoardSeguimientos.css">
     <link rel="stylesheet" href="../../assets/dashBoard/veterinarias/css/nodoNoche.css">
 
 </head>
@@ -40,11 +41,11 @@
                 <i class="bi bi-speedometer2"></i>
                 <span class="texto-item-sidebar">Dashboard</span>
             </a>
-            <a href="../veterinarias/dashBoardSeguimientos.html" class="item-sidebar">
+            <a href="../veterinarias/dashBoardSeguimientos.html" class="item-sidebar active">
                 <i class="bi bi-arrow-repeat"></i>
                 <span class="texto-item-sidebar">Seguimientos</span>
             </a>
-            <a href="../veterinarias/dashBoardCalendario.html" class="item-sidebar active">
+            <a href="../veterinarias/dashBoardCalendario.html" class="item-sidebar">
                 <i class="bi bi-calendar3"></i>
                 <span class="texto-item-sidebar">Calendario</span>
             </a>
@@ -217,24 +218,23 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <div class="contenido-principal" id="contenidoPrincipal">
-
         <!-- NAVBAR SUPERIOR -->
         <div class="barra-navegacion-superior">
             <div class="navegacion-izquierda">
                 <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-star text-warning"></i>
-                    <span class="fw-semibold">Dashboards</span>
+                    <i class="bi bi-arrow-repeat text-success"></i>
+                    <span class="fw-semibold">Seguimientos</span>
                     <span class="text-muted">/</span>
-                    <span>Gestión de Citas</span>
+                    <span>Monitoreo de Pacientes</span>
                 </div>
             </div>
             <div class="buscador-navegacion">
                 <i class="bi bi-search"></i>
-                <input type="text" placeholder="Search" class="form-control">
+                <input type="text" placeholder="Buscar seguimiento..." class="form-control" id="buscadorSeguimientos">
             </div>
             <div class="acciones-navegacion">
-                <button class="boton-icono-navegacion" onclick="toggleTheme()">
-                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                <button class="boton-icono-navegacion">
+                    <i class="bi bi-brightness-high"></i>
                 </button>
                 <button class="boton-icono-navegacion">
                     <i class="bi bi-arrow-counterclockwise"></i>
@@ -248,492 +248,323 @@
             </div>
         </div>
 
-        <!-- BARRA DE ACCIONES -->
-        <div class="barra-acciones-seguimiento">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                <div class="d-flex gap-2 flex-wrap">
-                    <button class="boton-vista-seg active" data-vista="todos">
-                        <i class="bi bi-grid-3x3-gap"></i> Todos
-                    </button>
-                    <button class="boton-vista-seg" data-vista="activos">
-                        <i class="bi bi-clock-history"></i> Activos
-                    </button>
-                    <button class="boton-vista-seg" data-vista="completados">
-                        <i class="bi bi-check-circle"></i> Completados
-                    </button>
-                    <button class="boton-vista-seg" data-vista="criticos">
-                        <i class="bi bi-exclamation-triangle"></i> Críticos
-                    </button>
-                </div>
-                <div class="d-flex gap-2 align-items-center">
-                    <select class="select-filtro-seg">
-                        <option value="">Todos los estados</option>
-                        <option value="tratamiento">En tratamiento</option>
-                        <option value="observacion">En observación</option>
-                        <option value="recuperacion">Recuperación</option>
-                        <option value="critico">Estado crítico</option>
-                    </select>
-                    <button class="boton-nuevo-seg" onclick="abrirModalNuevoSeguimiento()">
+        <!-- ÁREA DE CONTENIDO -->
+        <div class="area-contenido">
+
+            <!-- FILTROS Y ACCIONES -->
+            <div class="barra-filtros-seguimiento">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="boton-filtro-seg active" data-filtro="todos">
+                            <i class="bi bi-grid-3x3-gap"></i> Todos
+                        </button>
+                        <button class="boton-filtro-seg" data-filtro="activos">
+                            <i class="bi bi-activity"></i> Activos
+                        </button>
+                        <button class="boton-filtro-seg" data-filtro="criticos">
+                            <i class="bi bi-exclamation-triangle"></i> Críticos
+                        </button>
+                        <button class="boton-filtro-seg" data-filtro="completados">
+                            <i class="bi bi-check-circle"></i> Completados
+                        </button>
+                    </div>
+                    <button class="boton-nuevo-seguimiento" onclick="nuevoSeguimiento()">
                         <i class="bi bi-plus-circle"></i> Nuevo Seguimiento
                     </button>
                 </div>
             </div>
-        </div>
 
-        <!-- TARJETAS DE RESUMEN -->
-        <div class="row g-3 mb-4">
-            <div class="col-md-3">
-                <div class="tarjeta-resumen-seg">
-                    <div class="icono-resumen-seg bg-info-soft">
-                        <i class="bi bi-clipboard-pulse text-info"></i>
-                    </div>
-                    <div>
-                        <h3>32</h3>
-                        <p>Total Seguimientos</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tarjeta-resumen-seg">
-                    <div class="icono-resumen-seg bg-primary-soft">
-                        <i class="bi bi-activity text-primary"></i>
-                    </div>
-                    <div>
-                        <h3>18</h3>
-                        <p>Activos</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tarjeta-resumen-seg">
-                    <div class="icono-resumen-seg bg-danger-soft">
-                        <i class="bi bi-heart-pulse-fill text-danger"></i>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                        <p>Críticos</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="tarjeta-resumen-seg">
-                    <div class="icono-resumen-seg bg-success-soft">
-                        <i class="bi bi-check-circle-fill text-success"></i>
-                    </div>
-                    <div>
-                        <h3>14</h3>
-                        <p>Completados Hoy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- GRID DE SEGUIMIENTOS -->
-        <div class="grid-seguimientos">
-
-            <!-- Tarjeta de Seguimiento 1 - Crítico -->
-            <div class="tarjeta-seguimiento critico">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart-pulse-fill"></i>
+            <!-- TARJETAS DE ESTADÍSTICAS -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-3">
+                    <div class="tarjeta-stat-seguimiento">
+                        <div class="icono-stat-seg bg-primary-soft">
+                            <i class="bi bi-activity text-primary"></i>
                         </div>
-                        <div>
-                            <h5>Luna</h5>
-                            <p class="raza-seg">Golden Retriever • 5 años</p>
+                        <div class="info-stat-seg">
+                            <h3>42</h3>
+                            <p>Seguimientos Activos</p>
                         </div>
                     </div>
-                    <span class="badge-prioridad critico">
-                        <i class="bi bi-exclamation-triangle-fill"></i> Crítico
-                    </span>
                 </div>
-
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Postoperatorio - Cirugía abdominal</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline activo"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 10:30 AM</div>
-                                <div class="accion-timeline">Control de signos vitales</div>
-                                <div class="notas-timeline">Temperatura: 38.5°C | FC: 95 lpm | FR: 28 rpm</div>
-                            </div>
+                <div class="col-md-3">
+                    <div class="tarjeta-stat-seguimiento">
+                        <div class="icono-stat-seg bg-danger-soft">
+                            <i class="bi bi-exclamation-octagon text-danger"></i>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Ayer, 6:00 PM</div>
-                                <div class="accion-timeline">Administración de medicamento</div>
-                                <div class="notas-timeline">Antibiótico IV - Respuesta favorable</div>
-                            </div>
+                        <div class="info-stat-seg">
+                            <h3>8</h3>
+                            <p>Críticos</p>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Ayer, 2:00 PM</div>
-                                <div class="accion-timeline">Revisión de herida quirúrgica</div>
-                                <div class="notas-timeline">Sin signos de infección</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="proxima-revision">
-                        <i class="bi bi-calendar-check"></i>
-                        <span>Próxima revisión: <strong>Hoy, 4:00 PM</strong></span>
                     </div>
                 </div>
-
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dr. Juan Pérez</span>
+                <div class="col-md-3">
+                    <div class="tarjeta-stat-seguimiento">
+                        <div class="icono-stat-seg bg-warning-soft">
+                            <i class="bi bi-clock-history text-warning"></i>
+                        </div>
+                        <div class="info-stat-seg">
+                            <h3>15</h3>
+                            <p>Medicaciones Hoy</p>
+                        </div>
                     </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-registrar" title="Registrar evento">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-editar" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </button>
+                </div>
+                <div class="col-md-3">
+                    <div class="tarjeta-stat-seguimiento">
+                        <div class="icono-stat-seg bg-success-soft">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                        </div>
+                        <div class="info-stat-seg">
+                            <h3>128</h3>
+                            <p>Completados</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta de Seguimiento 2 - En Tratamiento -->
-            <div class="tarjeta-seguimiento tratamiento">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Max</h5>
-                            <p class="raza-seg">Pastor Alemán • 7 años</p>
-                        </div>
+            <!-- TABLA DE SEGUIMIENTOS -->
+            <div class="contenedor-tabla-seguimientos">
+                <div class="encabezado-tabla-seg">
+                    <h5>Seguimientos Activos</h5>
+                    <div class="opciones-tabla">
+                        <select class="select-ordenar">
+                            <option>Más recientes</option>
+                            <option>Por prioridad</option>
+                            <option>Por paciente</option>
+                            <option>Por fecha fin</option>
+                        </select>
                     </div>
-                    <span class="badge-prioridad tratamiento">
-                        <i class="bi bi-clipboard-pulse"></i> Tratamiento
-                    </span>
                 </div>
 
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Tratamiento dermatológico - Alergia</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline activo"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 9:00 AM</div>
-                                <div class="accion-timeline">Aplicación de tratamiento tópico</div>
-                                <div class="notas-timeline">Mejoría visible en lesiones</div>
+                <div class="lista-seguimientos">
+                    <!-- Seguimiento 1 - Crítico -->
+                    <div class="card-seguimiento critico">
+                        <div class="header-seguimiento">
+                            <div class="info-paciente-seg">
+                                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=luna" alt="Luna"
+                                    class="avatar-seg">
+                                <div>
+                                    <h6>Luna</h6>
+                                    <span class="tipo-paciente">Golden Retriever - 3 años</span>
+                                </div>
+                            </div>
+                            <div class="badges-seguimiento">
+                                <span class="badge-prioridad critica">Crítico</span>
+                                <span class="badge-tipo post-operatorio">Post-Operatorio</span>
                             </div>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hace 2 días</div>
-                                <div class="accion-timeline">Control de evolución</div>
-                                <div class="notas-timeline">Reducción de prurito significativa</div>
+
+                        <div class="body-seguimiento">
+                            <div class="diagnostico-seg">
+                                <i class="bi bi-clipboard-pulse"></i>
+                                <strong>Diagnóstico:</strong> Cirugía de cadera - Displasia
+                            </div>
+                            <div class="tratamiento-seg">
+                                <i class="bi bi-capsule"></i>
+                                <strong>Tratamiento:</strong> Antibióticos + Analgésicos
+                            </div>
+                            <div class="doctor-seg">
+                                <i class="bi bi-person-badge"></i>
+                                <strong>Doctor:</strong> Dra. María García
                             </div>
                         </div>
-                    </div>
 
-                    <div class="proxima-revision">
-                        <i class="bi bi-calendar-check"></i>
-                        <span>Próxima revisión: <strong>Mañana, 10:00 AM</strong></span>
-                    </div>
-                </div>
-
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dra. María García</span>
-                    </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-registrar" title="Registrar evento">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-editar" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta de Seguimiento 3 - Observación -->
-            <div class="tarjeta-seguimiento observacion">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Michi</h5>
-                            <p class="raza-seg">Gato Persa • 3 años</p>
-                        </div>
-                    </div>
-                    <span class="badge-prioridad observacion">
-                        <i class="bi bi-eye"></i> Observación
-                    </span>
-                </div>
-
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Observación post-vacunación</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline activo"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 11:00 AM</div>
-                                <div class="accion-timeline">Control de reacción</div>
-                                <div class="notas-timeline">Sin reacciones adversas</div>
+                        <div class="progreso-seguimiento">
+                            <div class="label-progreso">
+                                <span>Progreso del tratamiento</span>
+                                <span class="porcentaje-prog">45%</span>
+                            </div>
+                            <div class="barra-progreso-seg">
+                                <div class="fill-progreso" style="width: 45%;"></div>
                             </div>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 8:00 AM</div>
-                                <div class="accion-timeline">Aplicación de vacuna triple felina</div>
-                                <div class="notas-timeline">Administración exitosa</div>
+
+                        <div class="timeline-seguimiento">
+                            <div class="evento-timeline">
+                                <div class="punto-evento completado"></div>
+                                <div class="info-evento">
+                                    <strong>Cirugía Realizada</strong>
+                                    <span>28/10/2024 - 10:00 AM</span>
+                                </div>
+                            </div>
+                            <div class="evento-timeline">
+                                <div class="punto-evento completado"></div>
+                                <div class="info-evento">
+                                    <strong>Primera Revisión</strong>
+                                    <span>29/10/2024 - 02:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="evento-timeline">
+                                <div class="punto-evento activo"></div>
+                                <div class="info-evento">
+                                    <strong>Control de Medicación</strong>
+                                    <span>Hoy - 04:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="evento-timeline">
+                                <div class="punto-evento pendiente"></div>
+                                <div class="info-evento">
+                                    <strong>Revisión Final</strong>
+                                    <span>05/11/2024 - 11:00 AM</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="proxima-revision">
-                        <i class="bi bi-calendar-check"></i>
-                        <span>Próxima revisión: <strong>Hoy, 2:00 PM</strong></span>
-                    </div>
-                </div>
-
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dr. Carlos López</span>
-                    </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-registrar" title="Registrar evento">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-editar" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta de Seguimiento 4 - Recuperación -->
-            <div class="tarjeta-seguimiento recuperacion">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Rocky</h5>
-                            <p class="raza-seg">Bulldog Francés • 4 años</p>
+                        <div class="footer-seguimiento">
+                            <button class="btn-accion-seg btn-actualizar">
+                                <i class="bi bi-arrow-clockwise"></i> Actualizar
+                            </button>
+                            <button class="btn-accion-seg btn-detalles">
+                                <i class="bi bi-eye"></i> Ver Detalles
+                            </button>
+                            <button class="btn-accion-seg btn-nota">
+                                <i class="bi bi-journal-plus"></i> Agregar Nota
+                            </button>
                         </div>
                     </div>
-                    <span class="badge-prioridad recuperacion">
-                        <i class="bi bi-heart-pulse"></i> Recuperación
-                    </span>
-                </div>
 
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Recuperación post-fractura</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline activo"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 10:00 AM</div>
-                                <div class="accion-timeline">Fisioterapia</div>
-                                <div class="notas-timeline">Mejoría en movilidad</div>
+                    <!-- Seguimiento 2 - Activo -->
+                    <div class="card-seguimiento activo">
+                        <div class="header-seguimiento">
+                            <div class="info-paciente-seg">
+                                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=max" alt="Max"
+                                    class="avatar-seg">
+                                <div>
+                                    <h6>Max</h6>
+                                    <span class="tipo-paciente">Labrador - 5 años</span>
+                                </div>
+                            </div>
+                            <div class="badges-seguimiento">
+                                <span class="badge-prioridad media">Media</span>
+                                <span class="badge-tipo tratamiento">Tratamiento</span>
                             </div>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hace 3 días</div>
-                                <div class="accion-timeline">Control radiográfico</div>
-                                <div class="notas-timeline">Buena consolidación ósea</div>
+
+                        <div class="body-seguimiento">
+                            <div class="diagnostico-seg">
+                                <i class="bi bi-clipboard-pulse"></i>
+                                <strong>Diagnóstico:</strong> Dermatitis alérgica
+                            </div>
+                            <div class="tratamiento-seg">
+                                <i class="bi bi-capsule"></i>
+                                <strong>Tratamiento:</strong> Antihistamínicos + Dieta especial
+                            </div>
+                            <div class="doctor-seg">
+                                <i class="bi bi-person-badge"></i>
+                                <strong>Doctor:</strong> Dr. Juan Pérez
                             </div>
                         </div>
-                    </div>
 
-                    <div class="proxima-revision">
-                        <i class="bi bi-calendar-check"></i>
-                        <span>Próxima revisión: <strong>En 3 días</strong></span>
-                    </div>
-                </div>
-
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dra. Ana Martínez</span>
-                    </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-registrar" title="Registrar evento">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-editar" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta de Seguimiento 5 - Completado -->
-            <div class="tarjeta-seguimiento completado">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Bella</h5>
-                            <p class="raza-seg">Labrador • 6 años</p>
-                        </div>
-                    </div>
-                    <span class="badge-prioridad completado">
-                        <i class="bi bi-check-circle-fill"></i> Completado
-                    </span>
-                </div>
-
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Tratamiento de gastroenteritis</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline completado"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hace 1 hora</div>
-                                <div class="accion-timeline">Alta médica</div>
-                                <div class="notas-timeline">Recuperación completa</div>
+                        <div class="progreso-seguimiento">
+                            <div class="label-progreso">
+                                <span>Progreso del tratamiento</span>
+                                <span class="porcentaje-prog">75%</span>
+                            </div>
+                            <div class="barra-progreso-seg">
+                                <div class="fill-progreso" style="width: 75%;"></div>
                             </div>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 9:00 AM</div>
-                                <div class="accion-timeline">Control final</div>
-                                <div class="notas-timeline">Todos los valores normales</div>
+
+                        <div class="medicaciones-activas">
+                            <div class="titulo-medicaciones">
+                                <i class="bi bi-capsule-pill"></i> Medicaciones Activas
+                            </div>
+                            <div class="lista-medicaciones">
+                                <div class="item-medicacion">
+                                    <div class="nombre-med">Cetirizina 10mg</div>
+                                    <div class="dosis-med">1 tab c/12h</div>
+                                    <div class="proxima-dosis">Próxima: 18:00</div>
+                                </div>
+                                <div class="item-medicacion">
+                                    <div class="nombre-med">Dieta Hipoalergénica</div>
+                                    <div class="dosis-med">200g c/día</div>
+                                    <div class="proxima-dosis">Próxima: 20:00</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="proxima-revision completada">
-                        <i class="bi bi-check-circle"></i>
-                        <span>Seguimiento finalizado exitosamente</span>
-                    </div>
-                </div>
-
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dr. Juan Pérez</span>
-                    </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-archivar" title="Archivar">
-                            <i class="bi bi-archive"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta de Seguimiento 6 - En Tratamiento -->
-            <div class="tarjeta-seguimiento tratamiento">
-                <div class="header-seguimiento">
-                    <div class="info-paciente-seg">
-                        <div class="avatar-paciente">
-                            <i class="bi bi-heart"></i>
-                        </div>
-                        <div>
-                            <h5>Toby</h5>
-                            <p class="raza-seg">Chihuahua • 2 años</p>
+                        <div class="footer-seguimiento">
+                            <button class="btn-accion-seg btn-actualizar">
+                                <i class="bi bi-arrow-clockwise"></i> Actualizar
+                            </button>
+                            <button class="btn-accion-seg btn-detalles">
+                                <i class="bi bi-eye"></i> Ver Detalles
+                            </button>
+                            <button class="btn-accion-seg btn-nota">
+                                <i class="bi bi-journal-plus"></i> Agregar Nota
+                            </button>
                         </div>
                     </div>
-                    <span class="badge-prioridad tratamiento">
-                        <i class="bi bi-clipboard-pulse"></i> Tratamiento
-                    </span>
-                </div>
 
-                <div class="body-seguimiento">
-                    <div class="diagnostico-seg">
-                        <i class="bi bi-clipboard-heart"></i>
-                        <span>Tratamiento dental</span>
-                    </div>
-
-                    <div class="timeline-seguimiento">
-                        <div class="item-timeline">
-                            <div class="punto-timeline activo"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hoy, 8:30 AM</div>
-                                <div class="accion-timeline">Limpieza dental</div>
-                                <div class="notas-timeline">Procedimiento completado</div>
+                    <!-- Seguimiento 3 - Activo Normal -->
+                    <div class="card-seguimiento activo">
+                        <div class="header-seguimiento">
+                            <div class="info-paciente-seg">
+                                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=miau" alt="Miau"
+                                    class="avatar-seg">
+                                <div>
+                                    <h6>Miau</h6>
+                                    <span class="tipo-paciente">Gato Persa - 2 años</span>
+                                </div>
+                            </div>
+                            <div class="badges-seguimiento">
+                                <span class="badge-prioridad baja">Baja</span>
+                                <span class="badge-tipo preventivo">Preventivo</span>
                             </div>
                         </div>
-                        <div class="item-timeline">
-                            <div class="punto-timeline"></div>
-                            <div class="contenido-timeline">
-                                <div class="fecha-timeline">Hace 1 semana</div>
-                                <div class="accion-timeline">Evaluación inicial</div>
-                                <div class="notas-timeline">Gingivitis moderada</div>
+
+                        <div class="body-seguimiento">
+                            <div class="diagnostico-seg">
+                                <i class="bi bi-clipboard-pulse"></i>
+                                <strong>Diagnóstico:</strong> Control post-vacunación
+                            </div>
+                            <div class="tratamiento-seg">
+                                <i class="bi bi-capsule"></i>
+                                <strong>Tratamiento:</strong> Observación y monitoreo
+                            </div>
+                            <div class="doctor-seg">
+                                <i class="bi bi-person-badge"></i>
+                                <strong>Doctor:</strong> Dr. Carlos López
                             </div>
                         </div>
-                    </div>
 
-                    <div class="proxima-revision">
-                        <i class="bi bi-calendar-check"></i>
-                        <span>Próxima revisión: <strong>En 1 semana</strong></span>
-                    </div>
-                </div>
+                        <div class="progreso-seguimiento">
+                            <div class="label-progreso">
+                                <span>Progreso del tratamiento</span>
+                                <span class="porcentaje-prog">90%</span>
+                            </div>
+                            <div class="barra-progreso-seg">
+                                <div class="fill-progreso" style="width: 90%;"></div>
+                            </div>
+                        </div>
 
-                <div class="footer-seguimiento">
-                    <div class="responsable-seg">
-                        <i class="bi bi-person-badge"></i>
-                        <span>Dra. María García</span>
-                    </div>
-                    <div class="acciones-seg">
-                        <button class="btn-seg btn-registrar" title="Registrar evento">
-                            <i class="bi bi-plus-circle"></i>
-                        </button>
-                        <button class="btn-seg btn-ver" title="Ver detalles">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn-seg btn-editar" title="Editar">
-                            <i class="bi bi-pencil"></i>
-                        </button>
+                        <div class="proximas-acciones">
+                            <div class="titulo-acciones">
+                                <i class="bi bi-calendar-check"></i> Próximas Acciones
+                            </div>
+                            <div class="lista-acciones">
+                                <div class="item-accion">
+                                    <i class="bi bi-circle-fill text-success"></i>
+                                    <span>Control Final - 02/11/2024</span>
+                                </div>
+                                <div class="item-accion">
+                                    <i class="bi bi-circle-fill text-info"></i>
+                                    <span>Alta Médica - 05/11/2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-seguimiento">
+                            <button class="btn-accion-seg btn-actualizar">
+                                <i class="bi bi-arrow-clockwise"></i> Actualizar
+                            </button>
+                            <button class="btn-accion-seg btn-detalles">
+                                <i class="bi bi-eye"></i> Ver Detalles
+                            </button>
+                            <button class="btn-accion-seg btn-completar">
+                                <i class="bi bi-check-circle"></i> Completar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

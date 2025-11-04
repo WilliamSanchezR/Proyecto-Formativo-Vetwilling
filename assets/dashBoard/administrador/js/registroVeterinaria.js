@@ -55,7 +55,7 @@ btnGuardarVeterinaria.addEventListener('click', (e) => {
             confirmButtonText: 'Entendido'
         }).then(() => {
             setTimeout(() => {
-                document.location.href = '../../../../dashBoard/veterinarias/dashBoardVeterinaria.html';
+                document.location.href = '../../dashBoard/veterinarias/dashBoardVeterinaria.html';
             }, 500);
         });
     }
