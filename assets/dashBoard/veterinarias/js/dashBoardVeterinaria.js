@@ -185,7 +185,7 @@ $('.campo-buscar i').on('click', function () {
 
 
 $('#btnAgregarNuevo').on('click', function () {
-    document.location.href = "registroVeterinaria.html";
+    document.location.href = "../../../../dashBoard//administrador(dev)/registroVeterinaria.html";
 });
 
 

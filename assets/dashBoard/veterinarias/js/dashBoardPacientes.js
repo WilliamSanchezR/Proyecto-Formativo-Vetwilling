@@ -25,8 +25,6 @@
         document.getElementById('filtroEstado').addEventListener('change', function() {
             // Lógica de filtrado por estado
             console.log('Filtrar por estado:', this.value);
-<<<<<<< HEAD
-=======
         });
 
         // Cambiar entre vistas
@@ -73,5 +71,4 @@
                 console.log('Día seleccionado:', this.textContent);
                 // Aquí puedes cargar las citas del día seleccionado
             });
->>>>>>> d46d01c0700ad1e39b32bffdf5200b598ab04ff7
         });

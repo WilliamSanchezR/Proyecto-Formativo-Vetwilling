@@ -315,7 +315,7 @@ function consultarExamenes(valorInput) {
 // Evento del botón "Confirmar Registro"
 btnConfirmarRegistr.addEventListener('click', (e) => {
     e.preventDefault();
-    document.location.href = 'dashBoardLaboratorio.html';
+    document.location.href = '../../../../dashBoard/veterinarias/dashBoardLaboratorio.html';
 });
 
 // Evento del botón "Volver a revisar"
