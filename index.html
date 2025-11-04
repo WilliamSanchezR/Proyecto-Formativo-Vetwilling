@@ -4,26 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetWilling - Home</title>
+    <meta name="description" content="VetWilling - Sistema de gestión veterinaria profesional">
+    <title>VetWilling - Sistema de Gestión Veterinaria</title>
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Bootstrap-icons -->
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <!-- Favicon -->
-    <link rel="icon" href="assets/webSite/img/FAVICON.png" type="image">
-    <!-- Estilos -->
+    <link rel="icon" href="assets/webSite/img/FAVICON.png" type="image/x-icon">
+
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/webSite/css/style-home.css">
 </head>
 
 <body>
 
     <header>
-
-        <nav class="navbar navbar-expand-lg bg-white custom-navbar w-100 m-0 p-0">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-white custom-navbar">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/webSite/img/LOGO-PRINCIPAL.png" alt="VetWilling">
+                    <img src="assets/webSite/img/LOGO-PRINCIPAL.png" alt="VetWilling Logo">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,13 +39,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item mx-2">
-                            <a class="nav-link text-dark fw-semibold" href="index.html">Inicio</a>
+                            <a class="nav-link text-dark fw-semibold" href="#hero">Inicio</a>
                         </li>
                         <li class="nav-item mx-2">
                             <a class="nav-link text-dark fw-semibold" href="#sobre-nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link text-dark fw-semibold" href="#modulos">Modulos</a>
+                            <a class="nav-link text-dark fw-semibold" href="#modulos">Módulos</a>
                         </li>
                         <li class="nav-item mx-2">
                             <a class="nav-link text-dark fw-semibold" href="#precios">Planes</a>
@@ -48,171 +53,236 @@
                         <li class="nav-item mx-2">
                             <a class="nav-link text-dark fw-semibold" href="#equipo">Equipo</a>
                         </li>
-
                         <li class="nav-item mx-2">
-                            <a href="extras/login.html" id="btn-ingresar"
-                                class="btn btn-success px-4 fw-semibold">Ingresar</a>
+                            <a href="extras/login.html" class="btn btn-success px-4 fw-semibold">Ingresar</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- HERO PRINCIPAL -->
+        <!-- HERO SECTION CON ANIMACIONES -->
         <section id="hero">
-            <div class="container container-hero">
+            <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <h2 class="fw-bold mb-3">Profesional en cuidado y salud de las mascotas</h2>
-                        <p class="text-muted mb-4">
-                            En VetWilling creemos en el bienestar integral <br>
-                            de las mascotas.
-                            Nuestro equipo combina experiencia y tecnología
-                            <br>para ofrecer una aplicación de atención veterinaria
-                            de calidad.
+                    <!-- Contenido izquierdo -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1 class="display-5 fw-bold mb-4">Profesionales en cuidado y salud de las mascotas</h1>
+                        <p class="lead text-muted mb-4">
+                            En VetWilling creemos en el bienestar integral de las mascotas.
+                            Nuestro equipo combina experiencia y tecnología para ofrecer
+                            una aplicación de atención veterinaria de calidad.
                         </p>
-                        <div id="cont-btn-hero-left">
-                            <a href="#" class="btn btn-success px-4 py-2 fw-semibold">Contáctanos</a>
-                            <a href="#" id="btn-hero-right"
-                                class="btn btn-success px-4 py-2 fw-semibold">Veterinarias</a>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contacto" class="btn btn-success btn-lg px-4 py-2 fw-semibold">
+                                <i class="bi bi-envelope me-2"></i>Contáctanos
+                            </a>
+                            <a href="#precios" class="btn btn-outline-success btn-lg px-4 py-2 fw-semibold">
+                                <i class="bi bi-hospital me-2"></i>Ver Planes
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col-md-6 text-center">
-                        <img src="assets/webSite/img/imagenindex.png" alt="Nosotros"
-                            class="img-fluid rounded-4 about-img">
+                    <!-- Carrusel con huellas animadas -->
+                    <div class="col-lg-6">
+                        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                            data-bs-interval="4000">
+
+                            <div class="carousel-inner">
+                                <!-- Slide 1 - Perro -->
+                                <div class="carousel-item active">
+                                    <div class="carousel-image-wrapper">
+                                        <img src="assets/webSite/img/car1.png" class="d-block w-100 rounded-4"
+                                            alt="Veterinaria atendiendo perro">
+                                        <div class="paws-overlay paws-dog">
+                                            <div class="paw paw-1">🐾</div>
+                                            <div class="paw paw-2">🐾</div>
+                                            <div class="paw paw-3">🐾</div>
+                                            <div class="paw paw-4">🐾</div>
+                                            <div class="paw paw-5">🐾</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 - Gato -->
+                                <div class="carousel-item">
+                                    <div class="carousel-image-wrapper">
+                                        <img src="assets/webSite/img/car2.png" class="d-block w-100 rounded-4"
+                                            alt="Gato en consulta veterinaria">
+                                        <div class="paws-overlay paws-cat">
+                                            <div class="paw paw-1">🐾</div>
+                                            <div class="paw paw-2">🐾</div>
+                                            <div class="paw paw-3">🐾</div>
+                                            <div class="paw paw-4">🐾</div>
+                                            <div class="paw paw-5">🐾</div>
+                                            <div class="paw paw-6">🐾</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Slide 4 conejo -->
+                                <div class="carousel-item">
+                                    <div class="carousel-image-wrapper">
+                                        <img src="assets/webSite/img/car6.png" class="d-block w-100 rounded-4"
+                                            alt="Veterinaria atendiendo perro">
+                                        <div class="paws-overlay paws-dog">
+                                            <div class="paw paw-1">🐾</div>
+                                            <div class="paw paw-2">🐾</div>
+                                            <div class="paw paw-3">🐾</div>
+                                            <div class="paw paw-4">🐾</div>
+                                            <div class="paw paw-5">🐾</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="curva-inferior"></div>
         </section>
-
     </header>
 
     <main>
-
-        <!-- SECCIÓN SOBRE NOSOTROS -->
-        <section id="sobre-nosotros">
+        <!-- SOBRE NOSOTROS -->
+        <section id="sobre-nosotros" class="py-5">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <h2 class="fw-bold mb-3">Sobre Nosotros</h2>
-                        <p class="text-muted mb-4">
-                            En VetWilling creemos en el bienestar integral <br>
-                            de tus mascotas.
-                            Nuestro equipo combina amor, <br> experiencia y tecnología para ofrecer atención veterinaria
-                            de <br>
-                            calidad.
-                        </p>
-                        <a href="#" class="btn btn-success px-4 py-2 fw-semibold">Contáctanos</a>
+                    <div class="col-lg-6 text-center">
+                        <img src="assets/webSite/img/perrito.png" alt="Perrito feliz en consulta veterinaria"
+                            class="img-fluid rounded-4 shadow" loading="lazy">
                     </div>
 
-                    <div class="col-md-6 text-center">
-                        <img src="assets/webSite/img/perrito.png" alt="Nosotros" class="img-fluid rounded-4 about-img">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="display-6 fw-bold mb-4">Sobre Nosotros</h2>
+                        <p class="lead text-muted mb-4">
+                            En VetWilling creemos en el bienestar integral de tus mascotas.
+                            Nuestro equipo combina amor, experiencia y tecnología para ofrecer
+                            atención veterinaria de calidad.
+                        </p>
+                        <a href="#contacto" class="btn btn-success btn-lg px-4 py-2 fw-semibold">
+                            <i class="bi bi-whatsapp me-2"></i>Contáctanos
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="curva-inferior"></div>
         </section>
 
-
-        <section id="modulos" class=" text-white">
+        <!-- MÓDULOS -->
+        <section id="modulos" class="py-5 bg-success text-white">
             <div class="container">
-                <h2 class="fw-bold mb-3">Módulos del Sistema</h2>
-                <p class="mb-5">
-                    Con VetWilling, tu clínica veterinaria trabaja de manera más ágil y organizada. Gestiona tus citas
-                    de forma digital y sin complicaciones, mantén la información de tus clientes siempre actualizada y
-                    centralizada, y administra tu agenda con total control para evitar olvidos o cruces. Todo en un solo
-                    lugar, para que tu equipo se enfoque en lo más importante: el bienestar de las mascotas y la
-                    confianza de sus dueños.
+                <h2 class="display-6 fw-bold text-center mb-4">Módulos del Sistema</h2>
+                <p class="lead text-center mb-5">
+                    Con VetWilling, tu clínica veterinaria trabaja de manera más ágil y organizada.
+                    Gestiona tus citas de forma digital, mantén la información actualizada y
+                    administra tu agenda con total control.
                 </p>
 
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="modulo-card p-3 shadow-sm">
-                            <h5>Gestión de Citas</h5>
-                            <img src="assets/webSite/img/image 5.png" alt="Gestión de Citas"
-                                class="img-fluid rounded-3">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="modulo-card p-4 text-center rounded-4">
+                            <i class="bi bi-calendar-check display-1 text-success mb-3"></i>
+                            <h5 class="fw-bold mb-3">Gestión de Citas</h5>
+                            <img src="assets/webSite/img/image 5.png" alt="Interfaz de gestión de citas"
+                                class="img-fluid rounded-3" loading="lazy">
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
-                        <div class="modulo-card p-3 shadow-sm">
-                            <h5>Gestión de Clientes</h5>
-                            <img src="assets/webSite/img/image 6.png" alt="Gestión de Clientes"
-                                class="img-fluid rounded-3">
+                    <div class="col-md-4">
+                        <div class="modulo-card p-4 text-center rounded-4">
+                            <i class="bi bi-people display-1 text-success mb-3"></i>
+                            <h5 class="fw-bold mb-3">Gestión de Clientes</h5>
+                            <img src="assets/webSite/img/image 6.png" alt="Interfaz de gestión de clientes"
+                                class="img-fluid rounded-3" loading="lazy">
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-4">
-                        <div class="modulo-card p-3 shadow-sm">
-                            <h5>Gestión de Agenda</h5>
-                            <img src="assets/webSite/img/image 7.png" alt="Gestión de Agenda"
-                                class="img-fluid rounded-3">
+                    <div class="col-md-4">
+                        <div class="modulo-card p-4 text-center rounded-4">
+                            <i class="bi bi-clipboard-check display-1 text-success mb-3"></i>
+                            <h5 class="fw-bold mb-3">Gestión de Agenda</h5>
+                            <img src="assets/webSite/img/image 7.png" alt="Interfaz de gestión de agenda"
+                                class="img-fluid rounded-3" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="precios" class="py-5">
-            <div class="container text-center">
-                <h2 class="mb-5 fw-bold">Precios flexibles para cada modelo de clínica</h2>
+        <!-- PRECIOS -->
+        <section id="precios" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="display-6 fw-bold text-center mb-5">Precios flexibles para cada modelo de clínica</h2>
 
-                <div class="row justify-content-center g-4">
+                <div class="row g-4 justify-content-center">
                     <!-- Plan Básico -->
-                    <div class="col-md-3">
-                        <div class="card plan shadow-sm border border-dark rounded-4 h-100">
-                            <div class="card-body">
-                                <h5 class="fw-bold">#Básico</h5>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card plan h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-success">#Básico</h5>
                                 <p class="text-muted">Pequeñas y medianas clínicas<br>Clientes: +200 al mes</p>
-                                <h3 class="fw-bold">7.9$ <small class="text-muted">/mes</small></h3>
+                                <h3 class="fw-bold my-3">$7.9 <small class="text-muted fs-6">/mes</small></h3>
 
-                                <ul class="list-unstyled mt-3 text-start">
-                                    <li><i class="bi bi-check-circle"></i> Cuentas limitadas</li>
-                                    <li><i class="bi bi-check-circle"></i> Registros limitados</li>
-                                    <li><i class="bi bi-check-circle"></i> Experimente todas las funciones básicas</li>
+                                <ul class="list-unstyled mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Cuentas
+                                        limitadas</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Registros
+                                        limitados</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Funciones
+                                        básicas</li>
                                 </ul>
 
-                                <button class="btn mt-4 border-dark rounded-pill">PRUEBA</button>
+                                <a href="#contacto" class="btn btn-outline-success rounded-pill w-100">SOLICITAR
+                                    PRUEBA</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Plan Común -->
-                    <div class="col-md-3">
-                        <div class="card plan shadow-sm border border-dark rounded-4 h-100">
-                            <div class="card-body">
-                                <h5 class="fw-bold">#Común</h5>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card plan h-100 border-success">
+                            <div class="card-body d-flex flex-column">
+                                <div class="position-relative">
+                                    <span class="badge bg-success position-absolute top-0 end-0">POPULAR</span>
+                                </div>
+                                <h5 class="fw-bold text-success">#Común</h5>
                                 <p class="text-muted">Medianas clínicas<br>Clientes: +1000 al mes</p>
-                                <h3 class="fw-bold">14.9$ <small class="text-muted">/mes</small></h3>
+                                <h3 class="fw-bold my-3">$14.9 <small class="text-muted fs-6">/mes</small></h3>
 
-                                <ul class="list-unstyled mt-3 text-start">
-                                    <li><i class="bi bi-check-circle"></i> Cuentas limitadas</li>
-                                    <li><i class="bi bi-check-circle"></i> Registros ilimitados</li>
-                                    <li><i class="bi bi-check-circle"></i> Experimente todas las funciones básicas</li>
+                                <ul class="list-unstyled mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Cuentas
+                                        limitadas</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Registros
+                                        ilimitados</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Funciones
+                                        avanzadas</li>
                                 </ul>
 
-                                <button class="btn mt-4 border-dark rounded-pill">PRUEBA</button>
+                                <a href="#contacto" class="btn btn-success rounded-pill w-100">SOLICITAR PRUEBA</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Plan Deluxe -->
-                    <div class="col-md-3">
-                        <div class="card plan shadow-sm border border-dark rounded-4 h-100">
-                            <div class="card-body">
-                                <h5 class="fw-bold">#Deluxe</h5>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card plan h-100">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-success">#Deluxe</h5>
                                 <p class="text-muted">Clínicas grandes<br>Clientes: +3000 al mes</p>
-                                <h3 class="fw-bold">40.9$ <small class="text-muted">/mes</small></h3>
+                                <h3 class="fw-bold my-3">$40.9 <small class="text-muted fs-6">/mes</small></h3>
 
-                                <ul class="list-unstyled mt-3 text-start">
-                                    <li><i class="bi bi-check-circle"></i> Cuentas ilimitadas</li>
-                                    <li><i class="bi bi-check-circle"></i> Registros ilimitados</li>
-                                    <li><i class="bi bi-check-circle"></i> Sistema de soluciones</li>
+                                <ul class="list-unstyled mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Cuentas
+                                        ilimitadas</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Registros
+                                        ilimitados</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Soporte
+                                        24/7</li>
                                 </ul>
 
-                                <button class="btn mt-4 border-dark rounded-pill">PRUEBA</button>
+                                <a href="#contacto" class="btn btn-outline-success rounded-pill w-100">SOLICITAR
+                                    PRUEBA</a>
                             </div>
                         </div>
                     </div>
@@ -220,90 +290,323 @@
             </div>
         </section>
 
-        <section id="equipo">
-            <div class="container-equipo">
-                <h2>Equipo de trabajo</h2>
-                <div class="equipo-grid">
-                    <div class="card-equipo">
-                        <img src="assets/webSite/img/ejemplo.jpeg" alt="Brayan Andrade">
-                        <div class="info">
-                            <h3>Brayan Andrade</h3>
-                            <p>Designer</p>
+        <!-- EQUIPO CON FLIP CARDS -->
+        <section id="equipo" class="py-5 bg-success text-white">
+            <div class="container">
+                <h2 class="display-6 fw-bold text-center mb-5">Nuestro Equipo de Trabajo</h2>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Miembro 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <!-- Frente de la tarjeta -->
+                                <div class="flip-card-front">
+                                    <img src="assets/webSite/img/ejemplo.jpeg" alt="Brayan Andrade">
+                                    <div class="card-overlay">
+                                        <h3>Brayan Andrade</h3>
+                                        <p>Frontend Developer</p>
+                                        <span class="flip-hint"><i class="bi bi-arrow-repeat"></i> Toca para ver
+                                            más</span>
+                                    </div>
+                                </div>
+
+                                <!-- Reverso de la tarjeta -->
+                                <div class="flip-card-back">
+                                    <div class="back-content">
+                                        <h3>Brayan Andrade</h3>
+                                        <p class="role">Frontend Developer</p>
+
+                                        <div class="experience">
+                                            <h5><i class="bi bi-code-slash"></i> Experiencia</h5>
+                                            <ul>
+                                                <li>React.js & Vue.js</li>
+                                                <li>HTML5, CSS3, JavaScript</li>
+                                                <li>Responsive Design</li>
+                                                <li>3+ años de experiencia</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="social-links">
+                                            <a href="https://github.com/brayan" target="_blank" aria-label="GitHub">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/brayan" target="_blank"
+                                                aria-label="LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="mailto:brayan@vetwilling.com" aria-label="Email">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-equipo">
-                        <img src="assets/webSite/img/ejemplo.jpeg" alt="Adriana Castillo">
-                        <div class="info">
-                            <h3>Adriana Castillo</h3>
-                            <p>Designer</p>
+
+                    <!-- Miembro 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/webSite/img/ejemplo.jpeg" alt="Adriana Castillo">
+                                    <div class="card-overlay">
+                                        <h3>Adriana Castillo</h3>
+                                        <p>UI/UX Designer</p>
+                                        <span class="flip-hint"><i class="bi bi-arrow-repeat"></i> Toca para ver
+                                            más</span>
+                                    </div>
+                                </div>
+
+                                <div class="flip-card-back">
+                                    <div class="back-content">
+                                        <h3>Adriana Castillo</h3>
+                                        <p class="role">UI/UX Designer</p>
+
+                                        <div class="experience">
+                                            <h5><i class="bi bi-palette"></i> Experiencia</h5>
+                                            <ul>
+                                                <li>Figma & Adobe XD</li>
+                                                <li>User Research</li>
+                                                <li>Prototyping</li>
+                                                <li>4+ años de experiencia</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="social-links">
+                                            <a href="https://behance.net/adriana" target="_blank" aria-label="Behance">
+                                                <i class="bi bi-behance"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/adriana" target="_blank"
+                                                aria-label="LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="mailto:adriana@vetwilling.com" aria-label="Email">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-equipo">
-                        <img src="assets/webSite/img/ejemplo.jpeg" alt="Maicol Bernal">
-                        <div class="info">
-                            <h3>Maicol Bernal</h3>
-                            <p>Designer</p>
+
+                    <!-- Miembro 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/webSite/img/ejemplo.jpeg" alt="Maicol Bernal">
+                                    <div class="card-overlay">
+                                        <h3>Maicol Bernal</h3>
+                                        <p>Backend Developer</p>
+                                        <span class="flip-hint"><i class="bi bi-arrow-repeat"></i> Toca para ver
+                                            más</span>
+                                    </div>
+                                </div>
+
+                                <div class="flip-card-back">
+                                    <div class="back-content">
+                                        <h3>Maicol Bernal</h3>
+                                        <p class="role">Backend Developer</p>
+
+                                        <div class="experience">
+                                            <h5><i class="bi bi-server"></i> Experiencia</h5>
+                                            <ul>
+                                                <li>Node.js & Python</li>
+                                                <li>MySQL & MongoDB</li>
+                                                <li>API REST & GraphQL</li>
+                                                <li>5+ años de experiencia</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="social-links">
+                                            <a href="https://github.com/maicol" target="_blank" aria-label="GitHub">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/maicol" target="_blank"
+                                                aria-label="LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="mailto:maicol@vetwilling.com" aria-label="Email">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-equipo">
-                        <img src="assets/webSite/img/ejemplo.jpeg" alt="Yair Vergara">
-                        <div class="info">
-                            <h3>Yair Vergara</h3>
-                            <p>Designer</p>
+
+                    <!-- Miembro 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/webSite/img/ejemplo.jpeg" alt="Yair Vergara">
+                                    <div class="card-overlay">
+                                        <h3>Yair Vergara</h3>
+                                        <p>Full Stack Developer</p>
+                                        <span class="flip-hint"><i class="bi bi-arrow-repeat"></i> Toca para ver
+                                            más</span>
+                                    </div>
+                                </div>
+
+                                <div class="flip-card-back">
+                                    <div class="back-content">
+                                        <h3>Yair Vergara</h3>
+                                        <p class="role">Full Stack Developer</p>
+
+                                        <div class="experience">
+                                            <h5><i class="bi bi-layers"></i> Experiencia</h5>
+                                            <ul>
+                                                <li>React & Node.js</li>
+                                                <li>DevOps & CI/CD</li>
+                                                <li>AWS & Docker</li>
+                                                <li>6+ años de experiencia</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="social-links">
+                                            <a href="https://github.com/yair" target="_blank" aria-label="GitHub">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/yair" target="_blank"
+                                                aria-label="LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="mailto:yair@vetwilling.com" aria-label="Email">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-equipo">
-                        <img src="assets/webSite/img/ejemplo.jpeg" alt="William Sánchez">
-                        <div class="info">
-                            <h3>William Sánchez</h3>
-                            <p>Designer</p>
+
+                    <!-- Miembro 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/webSite/img/ejemplo.jpeg" alt="William Sánchez">
+                                    <div class="card-overlay">
+                                        <h3>William Sánchez</h3>
+                                        <p>Project Manager</p>
+                                        <span class="flip-hint"><i class="bi bi-arrow-repeat"></i> Toca para ver
+                                            más</span>
+                                    </div>
+                                </div>
+
+                                <div class="flip-card-back">
+                                    <div class="back-content">
+                                        <h3>William Sánchez</h3>
+                                        <p class="role">Project Manager</p>
+
+                                        <div class="experience">
+                                            <h5><i class="bi bi-briefcase"></i> Experiencia</h5>
+                                            <ul>
+                                                <li>Scrum & Agile</li>
+                                                <li>Team Leadership</li>
+                                                <li>Project Planning</li>
+                                                <li>7+ años de experiencia</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="social-links">
+                                            <a href="https://twitter.com/william" target="_blank" aria-label="Twitter">
+                                                <i class="bi bi-twitter"></i>
+                                            </a>
+                                            <a href="https://linkedin.com/in/william" target="_blank"
+                                                aria-label="LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="mailto:william@vetwilling.com" aria-label="Email">
+                                                <i class="bi bi-envelope"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer id="footer">
-        <div class="container-footer">
-            <div class="footer-col logo">
-                <img src="assets/webSite/img/LOGO-VERTICAL.png" alt="VetWilling Logo" class="footer-logo">
-            </div>
-
-            <div class="footer-col services">
-                <h4>Servicios</h4>
-                <ul>
-                    <li>Consultas generales</li>
-                    <li>Vacunación y desparasitación</li>
-                    <li>Urgencias 24/7</li>
-                    <li>Cirugías y hospitalización</li>
-                </ul>
-            </div>
-
-            <div class="footer-col contact">
-                <p><i class="bi bi-envelope-fill"></i> vetWilling@gmail.com</p>
-                <p><i class="bi bi-telephone-fill"></i> +57 310 8968615</p>
-                <p><i class="bi bi-clock-fill"></i> Horario: Lunes a Sábado 8:00am - 8:00pm</p>
-            </div>
-
-            <div class="footer-col social">
-                <h4>Redes sociales</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-whatsapp"></i></a>
+    <!-- FOOTER -->
+    <footer id="footer" class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <img src="assets/webSite/img/LOGO-VERTICAL.png" alt="VetWilling Logo" class="footer-logo mb-3">
                 </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Servicios</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Consultas generales</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Vacunación y desparasitación
+                        </li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Urgencias 24/7</li>
+                        <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Cirugías y hospitalización</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Contacto</h4>
+                    <p><i class="bi bi-envelope-fill text-success me-2"></i> vetWilling@gmail.com</p>
+                    <p><i class="bi bi-telephone-fill text-success me-2"></i> +57 310 8968615</p>
+                    <p><i class="bi bi-clock-fill text-success me-2"></i> Lun - Sáb: 8:00am - 8:00pm</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Síguenos</h4>
+                    <div class="social-icons d-flex gap-3">
+                        <a href="#" class="btn btn-outline-success rounded-circle" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-success rounded-circle" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-success rounded-circle" aria-label="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 VetWilling. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Bootstrap -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- Script personalizado (opcional) -->
+    <script>
+        // Smooth scroll para los enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
