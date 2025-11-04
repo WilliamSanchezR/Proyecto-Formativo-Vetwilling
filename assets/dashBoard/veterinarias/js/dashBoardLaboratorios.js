@@ -199,7 +199,7 @@ $('.campo-buscar i').on('click', function () {
 
 
 $('#btnAgregarNuevo').on('click', function () {
-    document.location.href = "registroPacientesLaboratorio.html";
+    document.location.href = "../../../../dashBoard/veterinarias/registroPacientesLaboratorio.html";
 });
 
 // Cerrar modal de resultados de laboratorio al guardar
