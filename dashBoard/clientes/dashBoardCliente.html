@@ -18,22 +18,20 @@
 
     <!-- css propio -->
     <link rel="stylesheet" href="../../assets/dashBoard/cliente/css/clientes.css">
+    <link rel="stylesheet" href="../../assets/dashBoard/cliente/css/mascotas.css">
 
 
 </head>
 
 <body>
 
-    <!-- SIDEBAR REDISEÑADO -->
+   <!-- SIDEBAR -->
     <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
-
-        <!-- Logo Header -->
         <div class="marca-sidebar">
             <img src="../../assets/webSite/img/LOGO-POSITIVO.png" alt="logo" class="logo-completo">
-            <img src="../../assets/webSite/img/FAVICON.png" alt="logo" class="logo-icono-sidebar">
+            <img src="../../assets/webSite/img/LOGO-VERTICAL-POSITIVA.png" width="100" alt="logo" class="logo-icono-sidebar">
         </div>
 
-        <!-- Perfil Usuario -->
         <div class="perfil-usuario">
             <div class="perfil-avatar">C</div>
             <div class="perfil-info">
@@ -42,63 +40,51 @@
             </div>
         </div>
 
-        <!-- Menú Principal -->
         <div class="menu-sidebar">
             <div class="seccion-sidebar">Menú Principal</div>
 
-            <a href="../clientes/dashBoardCliente.html" class="item-sidebar active" data-tooltip="Inicio">
+            <a href="dashBoardCliente.html" class="item-sidebar">
                 <i class="bi bi-house-door"></i>
                 <span class="texto-item-sidebar">Inicio</span>
             </a>
 
-            <a href="../clientes/dashBoardMascotas.html" class="item-sidebar" data-tooltip="Mis Mascotas">
+            <a href="#" class="item-sidebar active">
                 <i class="bi bi-heart-pulse"></i>
                 <span class="texto-item-sidebar">Mis Mascotas</span>
                 <span class="item-badge">3</span>
             </a>
 
-            <a href="../clientes/dashBoardCitas.html" class="item-sidebar" data-tooltip="Mis Citas">
+            <a href="#" class="item-sidebar">
                 <i class="bi bi-calendar-event"></i>
                 <span class="texto-item-sidebar">Mis Citas</span>
                 <span class="item-badge">2</span>
             </a>
 
-            <a href="../veterinarias/dashBoardCitas.html" class="item-sidebar" data-tooltip="Agendar Cita">
+            <a href="#" class="item-sidebar">
                 <i class="bi bi-calendar-plus"></i>
                 <span class="texto-item-sidebar">Agendar Cita</span>
             </a>
 
-            <a href="../veterinarias/dashBoardLaboratorio.html" class="item-sidebar" data-tooltip="Recetas Médicas">
-                <i class="bi bi-prescription2"></i>
-                <span class="texto-item-sidebar">Recetas Médicas</span>
-            </a>
-
             <div class="seccion-sidebar">Servicios</div>
 
-            <a href="../veterinarias/dashBoardRegUsuario.html" class="item-sidebar" data-tooltip="Historial Clínico">
+            <a href="#" class="item-sidebar">
                 <i class="bi bi-file-medical"></i>
                 <span class="texto-item-sidebar">Historial Clínico</span>
             </a>
 
-            <a href="../veterinarias/dashBoardGestClinica.html" class="item-sidebar" data-tooltip="Tienda">
+            <a href="#" class="item-sidebar">
                 <i class="bi bi-cart3"></i>
                 <span class="texto-item-sidebar">Tienda</span>
             </a>
 
-            <a href="../veterinarias/dashBoardReportes.html" class="item-sidebar" data-tooltip="Contacto">
-                <i class="bi bi-envelope"></i>
-                <span class="texto-item-sidebar">Contacto</span>
-            </a>
-
             <div class="seccion-sidebar">Cuenta</div>
 
-            <a href="../../index.html" class="item-sidebar cerrar-sesion" data-tooltip="Cerrar Sesión">
+            <a href="#" class="item-sidebar cerrar-sesion">
                 <i class="bi bi-box-arrow-left"></i>
                 <span class="texto-item-sidebar">Cerrar Sesión</span>
             </a>
         </div>
 
-        <!-- Botón Colapsar -->
         <button class="boton-colapsar" onclick="toggleSidebar()">
             <i class="bi bi-chevron-left" id="iconoColapsar"></i>
         </button>
