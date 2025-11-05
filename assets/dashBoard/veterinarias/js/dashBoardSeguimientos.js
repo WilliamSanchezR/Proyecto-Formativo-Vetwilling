@@ -1,32 +1,22 @@
-    // Cambiar entre vistas de seguimiento
-    document.querySelectorAll('.boton-vista-seg').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelectorAll('.boton-vista-seg').forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-
-            const vista = this.dataset.vista;
-            const tarjetas = document.querySelectorAll('.tarjeta-seguimiento');
-
-            tarjetas.forEach(tarjeta => {
-                if (vista === 'todos') {
-                    tarjeta.style.display = 'block';
-                } else if (vista === 'activos') {
-                    if (tarjeta.classList.contains('tratamiento') || 
-                        tarjeta.classList.contains('observacion') || 
-                        tarjeta.classList.contains('recuperacion')) {
-                        tarjeta.style.display = 'block';
-                    } else {
-                        tarjeta.style.display = 'none';
-                    }
-                } else if (vista === 'completados') {
-                    tarjeta.style.display = tarjeta.classList.contains('completado') ? 'block' : 'none';
-                } else if (vista === 'criticos') {
-                    tarjeta.style.display = tarjeta.classList.contains('critico') ? 'block' : 'none';
-                }
+// Filtros de seguimiento
+        document.querySelectorAll('.boton-filtro-seg').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.boton-filtro-seg').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                const filtro = this.dataset.filtro;
+                console.log('Filtro seleccionado:', filtro);
+                // Aquí iría la lógica para filtrar los seguimientos
             });
         });
-    });
 
-    function abrirModalNuevoSeguimiento() {
-        alert('Aquí se abrirá el modal para crear un nuevo seguimiento');
-    }
+        // Búsqueda de seguimientos
+        document.getElementById('buscadorSeguimientos').addEventListener('input', function(e) {
+            const termino = e.target.value.toLowerCase();
+            console.log('Buscando:', termino);
+            // Aquí iría la lógica de búsqueda
+        });
+
+        // Nuevo seguimiento
+        function nuevoSeguimiento() {
+            alert('Aquí se abrirá el modal para crear un nuevo seguimiento');
+        }
