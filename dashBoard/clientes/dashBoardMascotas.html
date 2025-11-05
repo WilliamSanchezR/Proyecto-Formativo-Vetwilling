@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente - Mascotas VetCare</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../assets/dashBoard/cliente/css/mascotas.css">
+
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="barra-lateral-izquierda" id="barraLateralIzquierda">
+        <div class="marca-sidebar">
+            <img src="../../assets/webSite/img/LOGO-POSITIVO.png" alt="logo" class="logo-completo">
+            <img src="../../assets/webSite/img/LOGO-VERTICAL-POSITIVA.png" width="100" alt="logo" class="logo-icono-sidebar">
+        </div>
+
+        <div class="perfil-usuario">
+            <div class="perfil-avatar">C</div>
+            <div class="perfil-info">
+                <div class="perfil-nombre">Camilo Rodríguez</div>
+                <div class="perfil-rol">Cliente Premium</div>
+            </div>
+        </div>
+
+        <div class="menu-sidebar">
+            <div class="seccion-sidebar">Menú Principal</div>
+
+            <a href="dashBoardCliente.html" class="item-sidebar">
+                <i class="bi bi-house-door"></i>
+                <span class="texto-item-sidebar">Inicio</span>
+            </a>
+
+            <a href="#" class="item-sidebar active">
+                <i class="bi bi-heart-pulse"></i>
+                <span class="texto-item-sidebar">Mis Mascotas</span>
+                <span class="item-badge">3</span>
+            </a>
+
+            <a href="#" class="item-sidebar">
+                <i class="bi bi-calendar-event"></i>
+                <span class="texto-item-sidebar">Mis Citas</span>
+                <span class="item-badge">2</span>
+            </a>
+
+            <a href="#" class="item-sidebar">
+                <i class="bi bi-calendar-plus"></i>
+                <span class="texto-item-sidebar">Agendar Cita</span>
+            </a>
+
+            <div class="seccion-sidebar">Servicios</div>
+
+            <a href="#" class="item-sidebar">
+                <i class="bi bi-file-medical"></i>
+                <span class="texto-item-sidebar">Historial Clínico</span>
+            </a>
+
+            <a href="#" class="item-sidebar">
+                <i class="bi bi-cart3"></i>
+                <span class="texto-item-sidebar">Tienda</span>
+            </a>
+
+            <div class="seccion-sidebar">Cuenta</div>
+
+            <a href="#" class="item-sidebar cerrar-sesion">
+                <i class="bi bi-box-arrow-left"></i>
+                <span class="texto-item-sidebar">Cerrar Sesión</span>
+            </a>
+        </div>
+
+        <button class="boton-colapsar" onclick="toggleSidebar()">
+            <i class="bi bi-chevron-left" id="iconoColapsar"></i>
+        </button>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="barra-lateral-derecha oculta" id="barraLateralDerecha">
+        <div class="encabezado-lateral-derecho">
+            <h5 class="mb-0">Panel Lateral</h5>
+            <button class="boton-cerrar-lateral" onclick="alternarBarraDerecha()">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+
+        <div class="p-3">
+            <h6 class="mb-3 fw-bold">Notificaciones</h6>
+            <div class="item-notificacion">
+                <div class="icono-notificacion icono-notificacion-azul">
+                    <i class="bi bi-bell"></i>
+                </div>
+                <div>
+                    <div class="fw-semibold">Recordatorio de vacuna</div>
+                    <small class="text-muted">Ahora</small>
+                </div>
+            </div>
+            <div class="item-notificacion">
+                <div class="icono-notificacion icono-notificacion-amarillo">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <div>
+                    <div class="fw-semibold">Cita confirmada</div>
+                    <small class="text-muted">Hace 52 min</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido-principal" id="contenidoPrincipal">
+        <!-- NAVBAR SUPERIOR -->
+        <div class="barra-navegacion-superior">
+            <div class="navegacion-izquierda">
+                <button class="boton-icono-navegacion d-md-none" onclick="toggleMobileSidebar()">
+                    <i class="bi bi-list"></i>
+                </button>
+                <i class="bi bi-heart text-danger"></i>
+                <span class="fw-semibold">Camilo</span>
+            </div>
+            <div class="buscador-navegacion">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Buscar..." class="form-control">
+            </div>
+            <div class="acciones-navegacion">
+                <button class="boton-icono-navegacion">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+                <button class="boton-icono-navegacion">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+                <button class="boton-icono-navegacion">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button class="boton-icono-navegacion" onclick="alternarBarraDerecha()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- ÁREA DE CONTENIDO -->
+        <div class="area-contenido">
+            <!-- Bienvenida -->
+            <section class="bienvenida">
+                <div class="texto-bienvenida">
+                    <h1>¡Hola, Camilo! 🐶</h1>
+                    <p>Nos alegra verte de nuevo. Aquí puedes gestionar todo sobre tus mascotas, citas y recetas fácilmente.</p>
+                    <button class="btn-agendar">Agendar nueva cita</button>
+                </div>
+                <img src="https://via.placeholder.com/180x180/00ffc3/0f2027?text=🐕" alt="Mascota feliz" class="img-bienvenida">
+            </section>
+
+            <!-- Sección Mis Mascotas -->
+            <section class="seccion-mascotas">
+                <h2>Mis Mascotas</h2>
+                <div class="grid-mascotas">
+                    <div class="tarjeta-mascota">
+                        <img src="https://via.placeholder.com/120x120/3b9dff/fff?text=🐕" alt="Rocky">
+                        <h3>Rocky</h3>
+                        <p>Perro • 4 años • 15 kg</p>
+                        <button class="btn-historial">Ver historial</button>
+                    </div>
+
+                    <div class="tarjeta-mascota">
+                        <img src="https://via.placeholder.com/120x120/00ffc3/fff?text=🐱" alt="Luna">
+                        <h3>Luna</h3>
+                        <p>Gato • 2 años • 4.5 kg</p>
+                        <button class="btn-historial">Ver historial</button>
+                    </div>
+
+                    <div class="tarjeta-mascota">
+                        <img src="https://via.placeholder.com/120x120/ffc107/fff?text=🐰" alt="Nube">
+                        <h3>Nube</h3>
+                        <p>Conejo • 1 año • 2.1 kg</p>
+                        <button class="btn-historial">Ver historial</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Próximas citas -->
+            <section class="seccion-citas">
+                <h2>Próximas Citas</h2>
+                <div class="tabla-citas">
+                    <div class="fila-cita encabezado">
+                        <span>Mascota</span>
+                        <span>Fecha</span>
+                        <span>Hora</span>
+                        <span>Motivo</span>
+                        <span>Acción</span>
+                    </div>
+
+                    <div class="fila-cita">
+                        <span>Rocky</span>
+                        <span>08/11/2025</span>
+                        <span>10:30 AM</span>
+                        <span>Vacunación</span>
+                        <button class="btn-detalle">Ver</button>
+                    </div>
+
+                    <div class="fila-cita">
+                        <span>Luna</span>
+                        <span>15/11/2025</span>
+                        <span>3:00 PM</span>
+                        <span>Chequeo general</span>
+                        <button class="btn-detalle">Ver</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('barraLateralIzquierda');
+            sidebar.classList.toggle('collapsed');
+            localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.getElementById('barraLateralIzquierda');
+            sidebar.classList.toggle('mobile-open');
+        }
+
+        function alternarBarraDerecha() {
+            const panel = document.getElementById('barraLateralDerecha');
+            panel.classList.toggle('oculta');
+        }
+
+        // Cargar preferencia del sidebar al iniciar
+        window.addEventListener('DOMContentLoaded', () => {
+            const sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+            if (sidebarCollapsed) {
+                document.getElementById('barraLateralIzquierda').classList.add('collapsed');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
