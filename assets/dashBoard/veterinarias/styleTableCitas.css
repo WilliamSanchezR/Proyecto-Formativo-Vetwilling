@@ -507,7 +507,7 @@
 
 /* Fila seleccionada */
 #tablaCitas tbody tr.selected {
-    background-color: rgba(10, 147, 44, 0.1) !important;
+    background-color: rgb(255, 10, 75) !important;
     border-left: 3px solid var(--color-primario);
 }
 

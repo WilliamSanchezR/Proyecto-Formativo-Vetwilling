@@ -362,13 +362,13 @@ $(document).ready(function() {
     // ========================================
     // SELECCIÓN DE FILA (OPCIONAL)
     // ========================================
-    $('#tablaCitas tbody').on('click', 'tr', function() {
-        if (!$(this).hasClass('selected')) {
-            $(this).addClass('selected').siblings().removeClass('selected');
-        } else {
-            $(this).removeClass('selected');
-        }
-    });
+    // $('#tablaCitas tbody').on('click', 'tr', function() {
+    //     if (!$(this).hasClass('selected')) {
+    //         $(this).addClass('selected').siblings().removeClass('selected');
+    //     } else {
+    //         $(this).removeClass('selected');
+    //     }
+    // });
 
     // ========================================
     // ATAJOS DE TECLADO
